@@ -1,0 +1,139 @@
+-- 创建用户表
+-- 电话 密码 昵称 邮箱 地址 姓名 身份证 出生日期 性别 注册时间
+CREATE TABLE user(
+id INT(10) NOT NULL primary key auto_increment,
+telephone varchar(30) NOT NULL UNIQUE,
+password varchar(255) NOT NULL,
+nickname varchar(20),
+email varchar(30),
+address varchar(50),
+name varchar(10),
+card_id varchar(30),
+age date,
+sex int(10),
+registe_time date not null
+alter table user add foreign key (sex) references sex (sid) -- 与性别表关联外键
+);
+
+-- 性别表
+-- id NAME
+create table sex(
+sid int(10) not null primary key auto_increment,
+name varchar(10)
+);
+
+-- 创建用户头像表 
+-- id user_id icon upload_date
+create table user_icon (
+iid int(10) not null primary key auto_increment,
+icon varchar(255),
+upload_date date,
+user_id int(10)
+alter table user_icon add foreign key (user_id) references user(id)
+);
+
+-- 创建省表
+-- id  省名
+create table province(
+pid int(10) not null primary key auto_increment,
+pname varchar(255) 
+
+);
+
+-- 创建城市表
+-- id 城市名 省id
+create table city(
+cid int(10) not null primary key auto_increment,
+cname varchar(20),
+province_id int(10)
+alter table city add foreign key (province_id) references province (pid)
+);
+
+-- 创建景点表
+-- id  景点名 景点开放时间  关闭时间 景点地址 景点简介 城市id
+create table scenic_spotty(
+tid int(10) not null primary key auto_increment,
+tname varchar(30),
+start_time date,
+end_time date,
+taddress varchar(255),
+tintroduce varchar(255),
+city_id int(10)
+alter table scenic_spotty add foreign key (city_id) references city (cid)
+);
+
+-- 创建门票表
+-- id 成人票价格 儿童票价格 优惠价格 退票类型 景点id
+create table ticket(
+id int(10) not null primary key auto_increment,
+adult_price decimal,
+child_price decimal,
+tprice_discount DECIMAL,
+tui_ticket varchar(10),
+scenic_id int(10)
+alter table ticket add foreign key (scenic_id) references scenic_spotty (tid)
+);
+
+
+-- 创建订单表
+-- id 订单编号 用户id 下单时间 游玩时间 门票数量 取票人 号码 证件类型 证件id 订单状态 支付方式
+create table order_ticket(
+id int(10) not null primary key auto_increment,
+order_id varchar(30),
+user_id int(10),
+order_time date,
+tourst_time date,
+onum int(10),
+oname varchar(10),
+telephone varchar(30),
+otype varchar(10),
+card varchar(30),
+order_start TINYINT default '1',
+way_buy tinyint default  '1'
+alter table order_ticket add foreign key (user_id) references user (id)
+);
+
+-- 创建订单详情表
+-- 订单号
+-- 订单数量
+-- 景点id
+create table order_orderdetail(
+id int(10) primary key auto_increment,
+order_id varchar(30),
+scenic_id int(10),
+sale_num int(10)
+alter table order_orderdetail add foreign key (order_id) references order_ticket (order_id)
+alter table order_orderdetail add foreign key (scenic_id) references scenic_spotty (tid)
+);
+
+-- 创建收藏表
+-- id 用户id 景点id 
+create table college(
+id int(10) primary key auto_increment,
+user_id int(10),
+scenic_id int(10)
+alter table college add foreign key (user_id) references user (id)
+alter table college add foreign key (scenic_id) references scenic_spotty (tid)
+);
+
+-- 创建评论表
+-- id 景点id 用户id 评论内容 
+create table comment(
+id int(10) primary key auto_increment,
+scenic_id int(10),
+user_id int(10),
+content varchar(255)
+alter table comment add foreign key (user_id) references user (id)
+alter table comment add foreign key (scenic_id) references scenic_spotty (tid)
+);
+
+-- 创建点赞表
+-- id 用户id  评论id 点赞状态
+create table thumbs_up(
+id int(10)  primary key auto_increment,
+comment_id INT(10) ,
+user_id int(10),
+statu tinyint default '1'
+alter table thumbs_up add foreign key (user_id) references user (id)
+alter table thumbs_up add foreign key (comment_id) references comment (id)
+);
