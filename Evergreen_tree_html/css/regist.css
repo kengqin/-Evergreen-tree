@@ -1,0 +1,189 @@
+.img1{
+    width:150px;
+    height:80px;
+    line-height: 80px;
+}
+.p1{
+    padding-top:50px;
+    font-size: 1em;
+    /*background: red;*/
+    font-family:"Microsoft YaHei UI Light";
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:none !important;
+}
+
+.back{
+    background-image: url("../image/000fivr7.jpg");
+    /*width:100%;*/
+    height:500px;
+    margin:30px -15px;
+    /*background:red;*/
+    /*background-size: cover;*/
+    /*box-sizing:content-box ;*/
+
+
+}
+body,ul,li,form,input{
+    margin: 0;
+    padding:0;
+}
+
+
+
+
+
+/*----------begin section--------*/
+/*.middle{*/
+    /*display:flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*margin-top: 50px;*/
+/*}*/
+.section{
+    width: 340px;
+    height:350px;
+    /*margin: 100px auto;*/
+    /*border: solid 1px grey;*/
+    /*border-left:dashed 1px #959595;*/
+    background:white;
+    box-shadow: 0px 0px 50px grey;
+    margin-top: 50px;
+    padding-top: 15px;
+
+}
+/*.section1{*/
+    /*width: 440px;*/
+    /*height: 330px;*/
+    /*!*margin: 100px auto;*!*/
+    /*!*border: solid 1px grey;*!*/
+    /*!*display:flex;*!*/
+    /*!*justify-content: right;*!*/
+    /*!*align-items: right;*!*/
+    /*flex-wrap: wrap;*/
+
+
+/*}*/
+.sp-weibo{
+    /*background-image: url("../image/微信.svg");*/
+    width: 32px;
+    height:32px;
+    float: left;
+    margin-right: 30px;
+    background-repeat: no-repeat;
+}
+.sp-qq{
+    /*background-image: url("../image/微信.svg");*/
+    width: 32px;
+    height:32px;
+    float: left;
+    margin-right: 30px;
+    background-repeat: no-repeat;
+}
+.sp-weixin{
+    /*background-image: url("../image/微信.svg");*/
+    width: 32px;
+    height:32px;
+    float: left;
+    margin-right: 30px;
+    background-repeat: no-repeat;
+}
+.sp-alipay{
+    /*background-image: url("../image/微信.svg");*/
+    width: 41px;
+    height:32px;
+    float: left;
+    margin-right: 30px;
+    background-repeat: no-repeat;
+}
+
+.section .top{
+    width: 100%;
+    height: 45px;
+    color: black;
+    font-size: 1.2em;
+    line-height: 45px;
+    padding-left:20px;
+    box-sizing: border-box;
+}
+.seperator{
+    width: 80%;
+    height: 1px;
+    background: grey;
+    margin: 0 auto;
+}
+.section .main table{
+    width: 100%;
+    height: 285px;
+    border: none;
+}
+
+.section .main table .col-1{
+    width: 40px;
+    text-align: right;
+    font-size: 1em;
+    color: #b4b4b4;
+    padding-right: 20px;
+}
+.section .main table .col-2{
+    width: 240px;
+    color: #00dd81;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+.section .main table .col-2 li{
+    /*height:40px;*/
+    margin-top: 10px;
+    list-style: none;
+    box-sizing: content-box;
+    /*border-bottom: solid 1px #00dd81;*/
+}
+.section .main table form:first-child{
+    border-bottom: solid 1px #c8c8c8;
+}
+.section .main table .text{
+    width: 240px;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #c8c8c8;
+    outline: none;
+}
+.section .main table .btn-regist{
+    width: 240px;
+    height: 40px;
+    /*border: solid 1px #c8c8c8;*/
+    border:none;
+    outline: none;
+    background:#1ABC9C;
+;
+    color: white;
+}
+.section .main table div[id$='error']{
+    color: red;
+    font-size: 0.7em;
+    height: 1em;
+
+}
+.icon{
+    margin-top:10px;
+    width: 32px;
+    height: 32px;
+}
+
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#c8c8c8;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#c8c8c8;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#c8c8c8;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #c8c8c8;
+}
+/*----------end section----------*/

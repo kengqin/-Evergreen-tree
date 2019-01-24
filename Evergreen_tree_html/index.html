@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常青树旅游网</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row" style="background:#ffffff;">
+        <div class="col-xs-4 col-md-4 col-lg-3">
+            <div>
+                <img src="img/logo1.png" style="width: 150px">
+
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-6" style="display: flex">
+            <div class="nmdd" style="flex: 1;line-height: 75px;text-align: center;margin-right: 5px;">
+                <span>
+                    <a href="#" style="text-decoration: none;color: #000000;font-size: 1.5em;font-weight: bold">目的地</a>
+                </span>
+            </div>
+            <div class="njd" style="flex: 1;line-height: 75px;text-align:center;">
+                <span>
+                    <a href="#" style="text-decoration: none;color: #000000;font-size: 1.5em;font-weight: bold">景点</a>
+                </span>
+            </div>
+            <div class="ngl" style="flex: 1;line-height: 75px;text-align: center;margin-left: 5px">
+                <span>
+                    <a href="#" style="text-decoration: none;color: #000000;font-size: 1.5em;font-weight: bold">攻略</a>
+                </span>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-3">
+            <div style="display: flex;">
+                <div class="nsx" style="text-align: center;width: 25%;line-height: 75px">
+                    <a href="#">
+                        <img src="img/书写.svg" title="写心得">
+                    </a>
+
+                </div>
+                <div class="nlx" style="text-align: center;width: 25%;line-height: 75px">
+                    <a href="#">
+                        <img src="img/旅行.svg" title="出门玩">
+                    </a>
+
+                </div>
+                <div class="ndl" style="text-align: center;width: 25%;line-height: 75px">
+                    <a href="#">
+                        <img src="img/登录%20密码%20icon.svg" title="请登录">
+                    </a>
+
+                </div>
+                <div class="nzc" style="text-align: center;width: 25%;line-height: 75px">
+                    <a href="#">
+                        <img src="img/注册.svg" title="请注册">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" id="father-mtyvideo2">
+            <video id="mtyvideo2" class="hero-video" muted="muted" preload="auto" loop="loop" autoplay>
+                <source src="https://ccm.ddcdn.com/cms/site/branding/videos/tahiti/video.mp4" type="video/mp4">
+            </video>
+            <div class="video-header">
+                <div class="button"><a href="#"><span>查看详情</span></a></div>
+            </div>
+            <div class="words-header">
+                <div class="search-bar">
+                    <div class="search-bar-content">
+                          <span>
+                              旅游至上
+                          </span>
+                        <p></p>
+                        <div>
+                            3亿全球旅人的真实点评&收藏, 200+国的旅人&旅游攻略
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="wayto">
+                <div class="checkbox">
+                    <input id="attraction" class="invisible" name="tabOption" type="radio" pageaction="Daodao_PTPT_Attraction_button">
+                    <label id="attractionlLabel" class="home-font home-image checked" for="attraction">景点</label>
+                    <input id="destination" class="invisible" name="tabOption" type="radio" pageaction="Daodao_PTPT_Destination_button">
+                    <label id="destinationLabel" class="home-font home-image " for="destination">目的地</label>
+                </div>
+                <div class="search-forms">
+                   <form id="attractionSearch" class="hidden" action="/Search" onsubmit="return ta.call('ta.pages.home.validate', event, this);" style="display: block">
+                       <input type="hidden" name="ssrc" value="A">
+                       <div id="acctraction_search_bar_wrap" class="search_bar_wrap">
+                           <input name="q" class="attraction search-input error focusClear" type="text" placeholder="城市或景点名称" value="城市或景点名称" id="attractionSearch_loc_handler" autocomplete="off">
+
+                           <span id="attractionSearch_loc_handler_icon" class="loc_handler_icon ui_icon caret-down"></span>
+                           <input type="hidden" name="geo" id="attractionSearch_loc_handler_geo-city" class="attraction search-input focusClear" value="">
+
+                       </div>
+
+                       <input class="search home-image" type="submit" onmousedown="ta.store('ta.pages.home.find.clicked', true);" value="搜索">
+
+                   </form>
+                    <form id="destinationSearch" class="hidden" action="/Search" onsubmit="return ta.call('ta.pages.home.validate', event, this);" style="display: block;">
+                        <div id="destination_search_bar_wrap" class="search_bar_wrap">
+                            <input name="q" class="destination search-input error focusClear" type="text" placeholder="国家、地区、或城市" value="国家、地区、或城市" id="destinationSearch_loc_handler" autocomplete="off">
+                            <span id="destinationSearch_loc_handler_icon" class="loc_handler_icon ui_icon caret-down"></span>
+                            <input type="hidden" name="geo" id="destinationSearch_loc_handler_geo-city" class="destination search-input focusClear" value="">
+                        </div>
+                        <input class="search home-image" type="submit" onmousedown="ta.store('ta.pages.home.find.clicked', true);" value="搜索">
+                        <input type="hidden" name="ssrc" value="g">
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="background-color: #eeeeee">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="hot-li">
+                <ul id="ul1">
+                    <li class="active-1"><a href="#">000</a> </li>
+                    <li class="active-2"><a href="#">001</a></li>
+                    <li class="active-3"><a href="#">002</a></li>
+                    <li class="active-4"><a href="#">003</a></li>
+                </ul>
+                <div class="content">
+                    <div class="col-xs-12 col-md-12 col-lg-12" id="show1">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp1.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp1.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp1.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-12" id="show1">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp2.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp2.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp2.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-12" id="show1">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp3.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp3.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp3.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-12" id="show1">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp4.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp4.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/showp4.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="margin-top: 100px ">
+    <div class="row" style="text-align: center">
+        <div class="col-xs-4 col-md-4 col-lg-4">排行榜1</div>
+        <div class="col-xs-4 col-md-4 col-lg-4">排行榜2</div>
+        <div class="col-xs-4 col-md-4 col-lg-4">排行榜3</div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 150px">
+    <div class="row">
+        <div class="jx">精选</div>
+        <div class="col-xs-4 col-md-4 col-lg-4">
+            <div class="pic1">
+                <div>
+                    <a href="#">
+                        <img src="img/dshow1.png">
+                    </a>
+
+                </div>
+            </div>
+            <div class="onwords">
+
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4">
+            <div class="pic1">
+                <img src="https://cc.ddcdn.com/ddimg/home_2015/city_guide.png">
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4">
+            <div class="pic1">
+                <img src="https://cc.ddcdn.com/ddimg/home_2015/tourism_blog.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 80px">
+    <div class="jx">精选</div>
+    <div class="row" id="jx">
+        <div class="col-xs-3 col-md-4 col-lg-4">
+            <img src="img/jd.jpg">
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <img src="img/pjd.jpg">
+        </div>
+        <div class="col-xs-3 col-md-4 col-lg-4">
+            <img src="img/bl.jpg">
+        </div>
+
+</div>
+</div>
+
+<div class="container-fluid" style="margin-top: 50px">
+    <div class="row">
+        <div class="buttom-line"></div>
+    </div>
+</div>
+
+<div class="container" style="font-size: 0.7em;margin-top: 20px">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div style="text-align: center">
+                <span style="color: #898989">
+                    关注我们
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="display: flex">
+            <div style="flex: 1;text-align: right;margin-right: 2px">
+                <a href="#">
+                    <img src="img/底部微信.svg">
+                </a>
+            </div>
+            <div style="flex: 1;text-align: left;margin-left: 2px">
+                <a href="#">
+                    <img src="img/微博.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: center">
+            <div>
+                <img src="img/指南.svg">
+                <p style="color: #898989">旅游导航</p>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="display: flex;">
+            <div style="flex: 1">
+                <ul>
+                    <li style="color: #898989;list-style: none">关于我们</li>
+                    <li style="color: #898989;list-style: none">关于常青树</li>
+                    <li style="color: #898989;list-style: none">加入我们</li>
+                    <li style="color: #898989;list-style: none">联系我们</li>
+                </ul>
+            </div>
+            <div style="flex: 1">
+                <ul>
+                    <li style="list-style: none;color: #898989">网站帮助</li>
+                    <li style="list-style: none;color: #898989">帮助中心</li>
+                    <li style="list-style: none;color: #898989">网站地图</li>
+                </ul>
+            </div>
+            <div style="flex: 1">
+                <ul>
+                    <li style="list-style: none;color: #898989">网站协议</li>
+                    <li style="list-style: none;color: #898989">服务协议</li>
+                    <li style="list-style: none;color: #898989">隐私保护</li>
+                    <li style="list-style: none;color: #898989">点评发布规则</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: left">
+            <div>
+                <span style="background:#ffbfbf;border-radius: 30px">
+                    <a href="#" style="text-decoration: none;color: #ffffff">
+                        <img src="img/客服.svg">
+                        <span>联系客服</span>
+                        </a>
+                </span>
+            </div>
+            <div>
+                <span style="color: #898989">
+                    客服电话:+8618256254291
+                </span>
+            </div>
+            <div>
+                <span  style="color: #898989">
+                    客服邮箱:1750475996@qq.com
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="text-align: center">
+            <div>
+                <ul style="display: flex">
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">许可证号:沪ICP证150903号</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">安全联盟</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">上海常青树科技有限公司</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">营业执照号:13699877</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/js.js"></script>>
+</body>
+</html>
