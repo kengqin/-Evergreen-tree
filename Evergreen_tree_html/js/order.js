@@ -14,7 +14,6 @@ table.onclick=function (event) {
     var num=document.querySelector('#div-show');
 
     if(node.getAttribute('type')=='button' || node.getAttribute('type')=='text' || node.getAttribute('type')=='body'){
-        alert(event.target.value);
 
         if(value1.value<=10 && value1.value>=1){
             changeNumber(event);

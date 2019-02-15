@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>orderDetail</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../css/order_detail.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row" style="height: 50px">
+        <div class=" col-xs-4 hidden-xs col-md-8 col-lg-9">
+            <div class="col-xs-8 col-md-6  col-lg-4">
+                <div class="img">
+                    <img src="../image/TA_logo_primary%20(1).svg">
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-12  visible-md col-lg-8 visible-lg" id="links-container">
+
+                <ul class="global-nav-links-menu">
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">目的地</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon hotels"></span>酒店</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon attractions"></span>景点</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon restaurants"></span>美食</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">游记</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-xs-8 col-md-4 col-lg-3">
+            <div class="write">
+                <div class="icon"><a href="#" title="写游记"><img src="../image/书写.svg"></a></div>
+                <div class="icon"><a href="#" title="开始旅行"><img src="../image/旅行.svg"></a></div>
+                <div class="icon2"><a href="#">登录</a>
+                    <a href="#">注册</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="display: flex">
+    <div class="content">
+        <!--左侧.begin-->
+        <div class="order_left">
+            <div class="item">
+                <a href="../index.html">
+                    <h3>我的首页</h3></a>
+            </div>
+            <div class="item_order ">
+                <a href="myOrder.html">
+                    <h4>
+                        我的订单
+
+                    </h4>
+                </a>
+            </div>
+            <div class="item_info">
+                <div id="pull1"><h4>个人中心<div id ="down1" class="glyphicon glyphicon-triangle-top"></div></h4></div>
+                <ul class="none1">
+                    <li>
+                        <a href="personalData.html">
+                            我的信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="MyCollection.html">我的收藏</a>
+                    </li>
+                    <li>
+                        <a href="MyComment.html">我的点评</a>
+                    </li>
+                    <li>
+                        <a href="PURCHASER.html">购票人</a>
+                    </li>
+                    <li>
+                        <a href="safety_center.html">安全中心</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="item_comm_inf">
+                <div id="pull2"><h4>常用信息管理<div id="down2" class="glyphicon glyphicon-triangle-bottom"></div></h4></div>
+                <ul class="none2">
+                    <li>
+                        <a href="Frequent_travellers.html">常用旅客</a>
+                    </li>
+                    <li>
+                        <a href="邮寄地址">邮寄地址</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧.begin-->
+        <div class="orderDetail">
+            <div class="right_main">
+                <div class="detail">
+                    <div class="detail_num">
+                        <ul>
+                            <li class="detail_num_font1">订单确认号:</li>
+                            <li class="detail_num_font2">123444</li>
+                            <li class="detail_num_font3">创建时间:</li>
+                            <li class="detail_num_font4">2019-2-15</li>
+                            <li class="detail_num_font5">合计金额:</li>
+                            <li class="detail_num_font6 glyphicon glyphicon-yen">250</li>
+                        </ul>
+                    </div>
+                    <div class="detail_more">
+                        <div class="detail_more_font1"></div>
+                        <div class="detail_more_font2">订单详情</div>
+                    </div>
+                    <div class="detail_top1">
+                        <ul>
+                            <li class="detail_top1_font1">景区名称</li>
+                            <li class="detail_top1_font2">产品</li>
+                            <li class="detail_top1_font3">门票数量</li>
+                            <li class="detail_top1_font4">游玩日期</li>
+                            <li class="detail_top1_font5">订单状态</li>
+                        </ul>
+                    </div>
+                    <div class="detail_top2">
+                        <ul>
+                            <li class="detail_top2_font1">
+                                <a href="">苏州天逸温泉</a>
+                            </li>
+                            <li class="detail_top2_font2">苏州天颐温泉成人票【平日】</li>
+                            <li class="detail_top2_font3">1</li>
+                            <li class="detail_top2_font4">2019-02-14</li>
+                            <li class="detail_top2_font5">已取消</li>
+                        </ul>
+                    </div>
+                    <div class="detail_money">
+                        <div class="detail_money_font1"></div>
+                        <div class="detail_money_font2">金额详情</div>
+                    </div>
+                    <div class="detail_top3">
+                        <ul>
+                            <li class="detail_top3_font1">支付方式</li>
+                            <li class="detail_top3_font2">产品价格</li>
+                            <li class="detail_top3_font3">其他优惠</li>
+                            <li class="detail_top3_font4">保险金额</li>
+                            <li class="detail_top3_font5">附加产品</li>
+                            <li class="detail_top3_font6">总金额</li>
+                            <li class="detail_top3_font7">点评奖金</li>
+                        </ul>
+                    </div>
+                    <div class="detail_top4">
+                        <ul>
+                            <li class="detail_top4_font1">在线支付</li>
+                            <li class="detail_top4_font2 glyphicon glyphicon-yen">250</li>
+                            <li class="detail_top4_font3">/</li>
+                            <li class="detail_top4_font4">/</li>
+                            <li class="detail_top4_font5">/</li>
+                            <li class="detail_top4_font6 glyphicon glyphicon-yen">250</li>
+                            <li class="detail_top4_font7">/</li>
+                        </ul>
+                    </div>
+                    <div class="detail_info">
+                        <div class="detail_info_font1"></div>
+                        <div class="detail_info_font2">地点名字</div>
+                        <div class="detail_info_font3">入园方式:</div>
+                        <div class="detail_info_font4">请您凭电子门票扫码入园</div>
+                    </div>
+                    <div class="detail_top5">
+                        <ul>
+                            <li class="detail_top5_font1">游玩人</li>
+                            <li class="detail_top5_font2">手机号</li>
+                            <li class="detail_top5_font3">身份证号</li>
+                            <li class="detail_top5_font4">邮箱</li>
+
+                        </ul>
+                    </div>
+                    <div class="detail_top6">
+                        <ul>
+                            <li class="detail_top6_font1">从预定页面获取</li>
+                            <li class="detail_top6_font2">17375035468</li>
+                            <li class="detail_top6_font3">/</li>
+                            <li class="detail_top6_font4">/</li>
+                        </ul>
+                    </div>
+                    <div class="detail_state">
+                        <div class="detail_state_font1"></div>
+                        <div class="detail_state_font2">订单状态</div>
+                    </div>
+                    <div class="state">
+                        <div class="state_pay">
+                            <div class="glyphicon glyphicon-tree-conifer state_pay_view"></div>
+                            <div class="state_pay_font">
+                                <p class="state_pay_font1">订单提交成功,待支付</p>
+                                <p class="state_pay_font2">您的订单已提交成功，为不影响您的出行，请您及时支付</p>
+                                <p class="state_pay_font3">2019-2-14 15:56:53</p>
+                            </div>
+                        </div>
+                        <div class="state_remove">
+                            <div class="glyphicon glyphicon-tree-conifer state_remove_view"></div>
+                            <div class="state_remove_font">
+                                <p class="state_remove_font1">订单取消成功</p>
+                                <p class="state_remove_font2">您的订单已取消成功，期待您的再次预订</p>
+                                <p class="state_remove_font3">2019-02-14 16:27:00</p>
+                            </div>
+                        </div>
+                        <div class="state_ok">
+                            <div class="glyphicon glyphicon-tree-conifer state_ok_view"></div>
+                            <div class="state_ok_font">
+                                <p class="state_ok_font1">订单预定成功</p>
+                                <p class="state_ok_font2">您的订单已预定成功，祝您旅途愉快</p>
+                                <p class="state_ok_font3">2019-02-14 20:20:20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="margin-top: 50px">
+    <div class="row">
+        <div class="buttom-line"></div>
+    </div>
+</div>
+
+<div class="container" style="font-size: 0.7em;margin-top: 20px">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div style="text-align: center">
+                <span style="color: #898989">
+                    关注我们
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="display: flex">
+            <div style="flex: 1;text-align: right;margin-right: 2px">
+                <a href="#">
+                    <img src="../image/底部微信.svg">
+                </a>
+            </div>
+            <div style="flex: 1;text-align: left;margin-left: 2px">
+                <a href="#">
+                    <img src="../image/微博.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: center">
+            <div>
+                <img src="../image/指南.svg">
+                <p style="color: #898989">旅游导航</p>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="display: flex;">
+            <div style="flex: 1">
+                <ul>
+                    <li style="color: #898989;list-style: none">关于我们</li>
+                    <li style="color: #898989;list-style: none">关于常青树</li>
+                    <li style="color: #898989;list-style: none">加入我们</li>
+                    <li style="color: #898989;list-style: none">联系我们</li>
+                </ul>
+            </div>
+            <div style="flex: 1">
+                <ul>
+                    <li style="list-style: none;color: #898989">网站帮助</li>
+                    <li style="list-style: none;color: #898989">帮助中心</li>
+                    <li style="list-style: none;color: #898989">网站地图</li>
+                </ul>
+            </div>
+            <div style="flex: 1">
+                <ul>
+                    <li style="list-style: none;color: #898989">网站协议</li>
+                    <li style="list-style: none;color: #898989">服务协议</li>
+                    <li style="list-style: none;color: #898989">隐私保护</li>
+                    <li style="list-style: none;color: #898989">点评发布规则</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: left">
+            <div>
+                <span style="background:#ffbfbf;border-radius: 30px">
+                    <a href="#" style="text-decoration: none;color: #ffffff">
+                        <img src="../image/客服.svg">
+                        <span>联系客服</span>
+                        </a>
+                </span>
+            </div>
+            <div>
+                <span style="color: #898989">
+                    客服电话:+8618256254291
+                </span>
+            </div>
+            <div>
+                <span  style="color: #898989">
+                    客服邮箱:1750475996@qq.com
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="text-align: center">
+            <div>
+                <ul style="display: flex">
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">许可证号:沪ICP证150903号</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">安全联盟</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">上海常青树科技有限公司</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">营业执照号:13699877</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/order_detail.js"></script>
+</body>
+</html>

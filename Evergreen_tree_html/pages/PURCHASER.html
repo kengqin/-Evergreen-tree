@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PURCHASER</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/PURCHASER.css">
+
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row" style="height: 50px">
+        <div class=" col-xs-4 hidden-xs col-md-8 col-lg-9">
+            <div class="col-xs-8 col-md-6  col-lg-4">
+                <div class="img">
+                    <img src="../image/TA_logo_primary%20(1).svg">
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-12  visible-md col-lg-8 visible-lg" id="links-container">
+
+                <ul class="global-nav-links-menu">
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">目的地</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon hotels"></span>酒店</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon attractions"></span>景点</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon restaurants"></span>美食</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">游记</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-xs-8 col-md-4 col-lg-3">
+            <div class="write">
+                <div class="icon"><a href="#" title="写游记"><img src="../image/书写.svg"></a></div>
+                <div class="icon"><a href="#" title="开始旅行"><img src="../image/旅行.svg"></a></div>
+                <div class="icon2"><a href="#">登录</a>
+                    <a href="#">注册</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="display: flex">
+    <div class="content">
+        <!--左侧.begin-->
+        <div class="order_left">
+            <div class="item">
+                <a href="../index.html">
+                    <h3>我的首页</h3></a>
+            </div>
+            <div class="item_order ">
+                <a href="myOrder.html">
+                    <h4>
+                        我的订单
+
+                    </h4>
+                </a>
+            </div>
+            <div class="item_info">
+                <div id="pull1"><h4>个人中心<div id ="down1" class="glyphicon glyphicon-triangle-top"></div></h4></div>
+                <ul class="none1">
+                    <li>
+                        <a href="personalData.html">
+                            我的信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="MyCollection.html">我的收藏</a>
+                    </li>
+                    <li>
+                        <a href="MyComment.html">我的点评</a>
+                    </li>
+                    <li>
+                        <a href="PURCHASER.html">购票人</a>
+                    </li>
+                    <li>
+                        <a href="safety_center.html">安全中心</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="item_comm_inf">
+                <div id="pull2"><h4>常用信息管理<div id="down2" class="glyphicon glyphicon-triangle-bottom"></div></h4></div>
+                <ul class="none2">
+                    <li>
+                        <a href="Frequent_travellers.html">常用旅客</a>
+                    </li>
+                    <li>
+                        <a href="邮寄地址">邮寄地址</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧.begin-->
+        <div class="purchaser_right">
+            <div class="right_main">
+                <div class="right_purchaser">
+                    <p>
+                        <a href="">购票人</a>
+                    </p>
+                </div>
+                <div class="purchaser_line1">
+
+                </div>
+                <div class="purchaser">
+                    <ul>
+                        <li class="choice_all">
+                            <input type="checkbox" id="purchaser_choice">
+                        </li>
+                        <li class="choice_font">全选</li>
+                        <li class="purchaser_name">姓名</li>
+                        <li class="purchaser_id">身份证号</li>
+                        <li class="purchaser_tel">手机号</li>
+                        <li class="del_choice">
+                            <a href="">删除选中</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="purchaser_line2"></div>
+                <div class="purchaser1">
+                    <ul>
+                        <li class="purchaser_font0">
+                            <input type="checkbox" id="purchaser1_choice">
+                        </li>
+                        <li class="purchaser_font1">
+                            <input type="text" placeholder="购票人姓名">
+                        </li>
+                        <li class="purchaser_font2">
+                            <input type="text" placeholder="购票人身份证号">
+                        </li>
+                        <li class="purchaser_font3">
+                            <input type="text" placeholder="购票人手机号">
+                        </li>
+                        <li class="purchaser_font4">
+                            <a href="">删除</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="purchaser_line3"></div>
+            <div class="add_purchaser">
+                <a href="">
+                    <span class="glyphicon glyphicon-plus-sign">&nbsp;新加购票人</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="margin-top: 50px">
+    <div class="row">
+        <div class="buttom-line"></div>
+    </div>
+</div>
+
+<div class="container" style="font-size: 0.7em;margin-top: 20px">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div style="text-align: center">
+                <span style="color: #898989">
+                    关注我们
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="display: flex">
+            <div style="flex: 1;text-align: right;margin-right: 2px">
+                <a href="#">
+                    <img src="../image/底部微信.svg">
+                </a>
+            </div>
+            <div style="flex: 1;text-align: left;margin-left: 2px">
+                <a href="#">
+                    <img src="../image/微博.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: center">
+            <div>
+                <img src="../image/指南.svg">
+                <p style="color: #898989">旅游导航</p>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="display: flex;">
+            <div style="flex: 1">
+                <ul>
+                    <li style="color: #898989;list-style: none">关于我们</li>
+                    <li style="color: #898989;list-style: none">关于常青树</li>
+                    <li style="color: #898989;list-style: none">加入我们</li>
+                    <li style="color: #898989;list-style: none">联系我们</li>
+                </ul>
+            </div>
+            <div style="flex: 1">
+                <ul>
+                    <li style="list-style: none;color: #898989">网站帮助</li>
+                    <li style="list-style: none;color: #898989">帮助中心</li>
+                    <li style="list-style: none;color: #898989">网站地图</li>
+                </ul>
+            </div>
+            <div style="flex: 1">
+                <ul>
+                    <li style="list-style: none;color: #898989">网站协议</li>
+                    <li style="list-style: none;color: #898989">服务协议</li>
+                    <li style="list-style: none;color: #898989">隐私保护</li>
+                    <li style="list-style: none;color: #898989">点评发布规则</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: left">
+            <div>
+                <span style="background:#ffbfbf;border-radius: 30px">
+                    <a href="#" style="text-decoration: none;color: #ffffff">
+                        <img src="../image/客服.svg">
+                        <span>联系客服</span>
+                        </a>
+                </span>
+            </div>
+            <div>
+                <span style="color: #898989">
+                    客服电话:+8618256254291
+                </span>
+            </div>
+            <div>
+                <span  style="color: #898989">
+                    客服邮箱:1750475996@qq.com
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="text-align: center">
+            <div>
+                <ul style="display: flex">
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">许可证号:沪ICP证150903号</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">安全联盟</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">上海常青树科技有限公司</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">营业执照号:13699877</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/PURCHASER.js"></script>
+</body>
+</html>

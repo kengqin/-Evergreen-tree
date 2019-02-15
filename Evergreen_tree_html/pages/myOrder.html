@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myOrder</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/myOrder.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row" style="height: 50px">
+        <div class=" col-xs-4 hidden-xs col-md-8 col-lg-9">
+            <div class="col-xs-8 col-md-6  col-lg-4">
+                <div class="img">
+                    <img src="../image/TA_logo_primary%20(1).svg">
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-12  visible-md col-lg-8 visible-lg" id="links-container">
+
+                <ul class="global-nav-links-menu">
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">目的地</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon hotels"></span>酒店</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon attractions"></span>景点</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab "><span
+                            class="ui_icon restaurants"></span>美食</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">游记</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-xs-8 col-md-4 col-lg-3">
+            <div class="write">
+                <div class="icon"><a href="#" title="写游记"><img src="../image/书写.svg"></a></div>
+                <div class="icon"><a href="#" title="开始旅行"><img src="../image/旅行.svg"></a></div>
+                <div class="icon2"><a href="#">登录</a>
+                    <a href="#">注册</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="display: flex">
+    <div class="content">
+        <!--左侧.begin-->
+        <div class="order_left">
+            <div class="item">
+                <a href="../index.html">
+                    <h3>我的首页</h3></a>
+            </div>
+            <div class="item_order ">
+                <a href="myOrder.html">
+                    <h4>
+                        我的订单
+
+                    </h4>
+                </a>
+            </div>
+            <div class="item_info">
+                <div id="pull1"><h4>个人中心<div id ="down1" class="glyphicon glyphicon-triangle-top"></div></h4></div>
+                <ul class="none1">
+                    <li>
+                        <a href="personalData.html">
+                            我的信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="MyCollection.html">我的收藏</a>
+                    </li>
+                    <li>
+                        <a href="MyComment.html">我的点评</a>
+                    </li>
+                    <li>
+                        <a href="PURCHASER.html">购票人</a>
+                    </li>
+                    <li>
+                        <a href="safety_center.html">安全中心</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="item_comm_inf">
+                <div id="pull2"><h4>常用信息管理<div id="down2" class="glyphicon glyphicon-triangle-bottom"></div></h4></div>
+                <ul class="none2">
+                    <li>
+                        <a href="Frequent_travellers.html">常用旅客</a>
+                    </li>
+                    <li>
+                        <a href="邮寄地址">邮寄地址</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧.begin-->
+        <div class="order_right">
+            <div class="right_main">
+                <div class="right_order">
+                    <ul>
+                        <li class="font1" id="font1">全部订单</li>
+                        <li class="font2" id="font2">
+                            待支付
+                            <span>0</span>
+                        </li>
+                        <li class="font3" id="font3">
+                            待出行
+                            <span>0</span>
+                        </li>
+                        <li class="font4" id="font4">
+                            待点评
+                            <span>0</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="right_line"></div>-->
+            </div>
+            <div class="right_line">
+                <div class="line1" id="line1"></div>
+                <div class="line2" id="line2"></div>
+                <div class="line3" id="line3"></div>
+                <div class="line4" id="line4"></div>
+            </div>
+            <div class="select0">
+                <div class="select0_left">
+                    全部订单
+                    <span class="glyphicon glyphicon-triangle-bottom" id="down3"></span>
+                </div>
+                <div class="select0_right">
+                    三个月内
+                    <span class="glyphicon glyphicon-triangle-bottom" id="down4"></span>
+                </div>
+            </div>
+            <div class="select1">
+                <div>
+                    <div class="select1_1" style="display: flex">
+                        不&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限:
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="select1_1_line">
+                            <span><a href="">全部订单</a></span>
+                        </div>
+                    </div>
+                    <div class="select1_2">
+                        交通住宿:
+                        <span>
+                            &nbsp;&nbsp;
+                            <a href="">飞机票</a>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a href="">火车票</a>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a href="">汽车票</a>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a href="">酒店</a>
+                        </span>
+                    </div>
+                    <div class="select1_3">
+                        度假旅游:
+                        <span>
+                            &nbsp;&nbsp;
+                            <a href="">景点</a>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a href="">周边游</a>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a href="">国内游</a>
+                        </span>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+            <div class="select2">
+                <div>
+                    <div class="select2_1">三个月内</div>
+                    <div class="select2_2">三个月前</div>
+                </div>
+            </div>
+            <div class="right_line1"></div>
+            <div class="right_info">
+                <ul>
+                    <li class="info_font1">产品信息</li>
+                    <li class="info_font2">订单金额</li>
+                    <li class="info_font3">订单编号</li>
+                    <li class="info_font4">订单状态</li>
+                    <li class="info_font5">订单操作</li>
+                </ul>
+            </div>
+            <div class="right_line2"></div>
+            <div class="right_info2">
+                <div class="picth">
+                    <img src="../image/order_jingdian.png" alt="">
+                </div>
+                <div class="introduce">
+                    <p class="introduce_1"><span>苏州博物馆</span></p>
+                    <p class="introduce_2">
+                        游玩日期：
+                        <span>2019-1-12</span>
+                    </p>
+                    <p class="introduce_3">
+                        门票数量：
+                        <span>1</span>
+                        张
+                    </p>
+                </div>
+                <div class="price">
+                    <span class="glyphicon glyphicon-jpy">128</span>
+                </div>
+                <div class="number">
+                    <span>
+                        sz5c3ff5fb21239f327896677
+                    </span>
+                </div>
+                <div class="state">
+                    <span>
+                        已取消
+                    </span>
+                </div>
+                <div class="operation">
+                    <a href="order_detail.html">
+                        <span>查看订单</span>
+                    </a>
+                    <a href="">
+                        <span>修改订单</span>
+                    </a>
+                    <a href="">
+                        <span>删除订单</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right_info2">
+                <div class="picth">
+                    <img src="../image/order_jingdian.png" alt="">
+                </div>
+                <div class="introduce">
+                    <p class="introduce_1"><span>苏州博物馆</span></p>
+                    <p class="introduce_2">
+                        游玩日期：
+                        <span>2019-1-12</span>
+                    </p>
+                    <p class="introduce_3">
+                        门票数量：
+                        <span>1</span>
+                        张
+                    </p>
+                </div>
+                <div class="price">
+                    <span class="glyphicon glyphicon-jpy">128</span>
+                </div>
+                <div class="number">
+                    <span>
+                        sz5c3ff5fb21239f327896677
+                    </span>
+                </div>
+                <div class="state">
+                    <span>
+                        已取消
+                    </span>
+                </div>
+                <div class="operation">
+                    <a href="">
+                        <span>查看订单</span>
+                    </a>
+                    <a href="">
+                        <span>修改订单</span>
+                    </a>
+                    <a href="">
+                        <span>删除订单</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right_info2">
+            <div class="picth">
+                <img src="../image/order_jingdian.png" alt="">
+            </div>
+            <div class="introduce">
+                <p class="introduce_1"><span>苏州博物馆</span></p>
+                <p class="introduce_2">
+                    游玩日期：
+                    <span>2019-1-12</span>
+                </p>
+                <p class="introduce_3">
+                    门票数量：
+                    <span>1</span>
+                    张
+                </p>
+            </div>
+            <div class="price">
+                <span class="glyphicon glyphicon-jpy">128</span>
+            </div>
+            <div class="number">
+                    <span>
+                        sz5c3ff5fb21239f327896677
+                    </span>
+            </div>
+            <div class="state">
+                    <span>
+                        已取消
+                    </span>
+            </div>
+            <div class="operation">
+                <a href="">
+                    <span>查看订单</span>
+                </a>
+                <a href="">
+                    <span>修改订单</span>
+                </a>
+                <a href="">
+                    <span>删除订单</span>
+                </a>
+            </div>
+        </div>
+            <div class="right_info2">
+                <div class="picth">
+                    <img src="../image/order_jingdian.png" alt="">
+                </div>
+                <div class="introduce">
+                    <p class="introduce_1"><span>苏州博物馆</span></p>
+                    <p class="introduce_2">
+                        游玩日期：
+                        <span>2019-1-12</span>
+                    </p>
+                    <p class="introduce_3">
+                        门票数量：
+                        <span>1</span>
+                        张
+                    </p>
+                </div>
+                <div class="price">
+                    <span class="glyphicon glyphicon-jpy">128</span>
+                </div>
+                <div class="number">
+                    <span>
+                        sz5c3ff5fb21239f327896677
+                    </span>
+                </div>
+                <div class="state">
+                    <span>
+                        已取消
+                    </span>
+                </div>
+                <div class="operation">
+                    <a href="">
+                        <span>查看订单</span>
+                    </a>
+                    <a href="">
+                        <span>修改订单</span>
+                    </a>
+                    <a href="">
+                        <span>删除订单</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right_info2">
+                <div class="picth">
+                    <img src="../image/order_jingdian.png" alt="">
+                </div>
+                <div class="introduce">
+                    <p class="introduce_1"><span>苏州博物馆</span></p>
+                    <p class="introduce_2">
+                        游玩日期：
+                        <span>2019-1-12</span>
+                    </p>
+                    <p class="introduce_3">
+                        门票数量：
+                        <span>1</span>
+                        张
+                    </p>
+                </div>
+                <div class="price">
+                    <span class="glyphicon glyphicon-jpy">128</span>
+                </div>
+                <div class="number">
+                    <span>
+                        sz5c3ff5fb21239f327896677
+                    </span>
+                </div>
+                <div class="state">
+                    <span>
+                        已取消
+                    </span>
+                </div>
+                <div class="operation">
+                    <a href="">
+                        <span>查看订单</span>
+                    </a>
+                    <a href="">
+                        <span>修改订单</span>
+                    </a>
+                    <a href="">
+                        <span>删除订单</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right_info2">
+                <div class="picth">
+                    <img src="../image/order_jingdian.png" alt="">
+                </div>
+                <div class="introduce">
+                    <p class="introduce_1"><span>苏州博物馆</span></p>
+                    <p class="introduce_2">
+                        游玩日期：
+                        <span>2019-1-12</span>
+                    </p>
+                    <p class="introduce_3">
+                        门票数量：
+                        <span>1</span>
+                        张
+                    </p>
+                </div>
+                <div class="price">
+                    <span class="glyphicon glyphicon-jpy">128</span>
+                </div>
+                <div class="number">
+                    <span>
+                        sz5c3ff5fb21239f327896677
+                    </span>
+                </div>
+                <div class="state">
+                    <span>
+                        已取消
+                    </span>
+                </div>
+                <div class="operation">
+                    <a href="">
+                        <span>查看订单</span>
+                    </a>
+                    <a href="">
+                        <span>修改订单</span>
+                    </a>
+                    <a href="">
+                        <span>删除订单</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right_line3"></div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="margin-top: 50px">
+    <div class="row">
+        <div class="buttom-line"></div>
+    </div>
+</div>
+
+<div class="container" style="font-size: 0.7em;margin-top: 20px">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div style="text-align: center">
+                <span style="color: #898989">
+                    关注我们
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="display: flex">
+            <div style="flex: 1;text-align: right;margin-right: 2px">
+                <a href="#">
+                    <img src="../image/底部微信.svg">
+                </a>
+            </div>
+            <div style="flex: 1;text-align: left;margin-left: 2px">
+                <a href="#">
+                    <img src="../image/微博.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: center">
+            <div>
+                <img src="../image/指南.svg">
+                <p style="color: #898989">旅游导航</p>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="display: flex;">
+            <div style="flex: 1">
+                <ul>
+                    <li style="color: #898989;list-style: none">关于我们</li>
+                    <li style="color: #898989;list-style: none">关于常青树</li>
+                    <li style="color: #898989;list-style: none">加入我们</li>
+                    <li style="color: #898989;list-style: none">联系我们</li>
+                </ul>
+            </div>
+            <div style="flex: 1">
+                <ul>
+                    <li style="list-style: none;color: #898989">网站帮助</li>
+                    <li style="list-style: none;color: #898989">帮助中心</li>
+                    <li style="list-style: none;color: #898989">网站地图</li>
+                </ul>
+            </div>
+            <div style="flex: 1">
+                <ul>
+                    <li style="list-style: none;color: #898989">网站协议</li>
+                    <li style="list-style: none;color: #898989">服务协议</li>
+                    <li style="list-style: none;color: #898989">隐私保护</li>
+                    <li style="list-style: none;color: #898989">点评发布规则</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: left">
+            <div>
+                <span style="background:#ffbfbf;border-radius: 30px">
+                    <a href="#" style="text-decoration: none;color: #ffffff">
+                        <img src="../image/客服.svg">
+                        <span>联系客服</span>
+                        </a>
+                </span>
+            </div>
+            <div>
+                <span style="color: #898989">
+                    客服电话:+8618256254291
+                </span>
+            </div>
+            <div>
+                <span  style="color: #898989">
+                    客服邮箱:1750475996@qq.com
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="text-align: center">
+            <div>
+                <ul style="display: flex">
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">许可证号:沪ICP证150903号</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">安全联盟</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">上海常青树科技有限公司</li>
+                    <li style="list-style: none;display: inline-block;color: #898989;width: 25%">营业执照号:13699877</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/myOrder.js"></script>
+</body>
+</html>

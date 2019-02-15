@@ -1,0 +1,310 @@
+body a ul li{
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    list-style-type: none;
+}
+a{
+    color: black;
+}
+
+
+#links-container{
+    line-height: 50px;
+}
+
+
+.global-nav-links-menu li{
+    list-style: none;
+    display: inline-block;
+
+    padding-left: 15px;
+}
+.global-nav-links-menu li a{
+    text-decoration: none;
+    color: #0f0f0f;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.global-nav-links-menu li a:hover{
+    color: #007c60;
+
+}
+.write{
+    display: flex;
+    line-height: 50px;
+
+}
+.icon{
+    padding-left: 20px;
+}
+.icon2{
+    padding-left: 25px;
+}
+.write .icon2 a{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0f0f0f;
+    height: 50px;
+    width: 60px;
+}
+.write .icon2 a:hover{
+    color: #007c60;
+
+}
+
+.content{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+a:hover{
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.order_left{
+    width: 170px;
+    height: 425px;
+    background-color: #f9f9f9;
+}
+.item{
+    height: 80px;
+    padding-left: 20px;
+    border: solid 1px #EDEDED;
+}
+.item_order{
+
+    padding-left: 20px;
+    border: solid 1px #EDEDED;
+}
+.item_info{
+    padding-left: 20px;
+    border: solid 1px #EDEDED;
+}
+
+.item_comm_inf{
+    padding-left: 20px;
+    border: solid 1px #EDEDED;
+}
+.item_comm_inf:hover{
+    cursor: pointer;
+}
+.item a h3{
+    line-height: 35px;
+    font-size: 1.4em;
+    font-weight: lighter;
+}
+.item_order a h4{
+    line-height: 40px;
+    font-size: 1em;
+    font-weight: bolder;
+
+}
+.item_info #pull1{
+    cursor: pointer;
+}
+.item_info #pull1 h4{
+    line-height: 40px;
+    font-size: 1em;
+    font-weight: bolder;
+}
+.item_info #pull2{
+    cursor: pointer;
+}
+.item_comm_inf #pull2 h4{
+    line-height: 40px;
+    font-size: 1em;
+    font-weight: bolder;
+}
+#down1{
+    width: 30px;
+    height: 30px;
+}
+.item_info .glyphicon-triangle-bottom{
+    margin-left: 60px;
+}
+.item_info .glyphicon-triangle-top{
+    margin-left: 60px;
+}
+
+.item_comm_inf .glyphicon-triangle-bottom{
+    margin-left: 32px;
+}
+.item_comm_inf .glyphicon-triangle-top{
+    margin-left: 32px;
+}
+.item_info .none1 li{
+    margin-left: -10px;
+    padding-top: 10px;
+    font-weight: lighter;
+}
+.item_comm_inf .none2 li{
+    margin-left: -10px;
+    padding-top: 10px;
+}
+.right_purchaser{
+    width:900px;
+    margin-left:40px;
+    display:flex;
+    overflow: hidden;
+}
+.right_purchaser p a{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #00f300;
+}
+.purchaser_line1{
+    border: 1px solid #EDEDED;
+    margin-left: 90px;
+    margin-top: 10px;
+}
+.purchaser{
+    margin-top: 10px;
+    margin-left: 50px;
+    display:flex;
+    overflow: hidden;
+}
+.purchaser ul li{
+    float: left;
+    box-sizing: border-box;
+}
+.choice_all{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.choice_font{
+    color: gray;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.purchaser_name{
+    color: gray;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.purchaser_id{
+    color: gray;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+.purchaser_tel{
+    color: gray;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+.del_choice{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.del_choice a{
+    color: #00b3ee;
+}
+.del_choice a:hover{
+    color: #FE770A;
+}
+.purchaser_line2{
+    border: 1px solid #EDEDED;
+    margin-left: 90px;
+    margin-top: 10px;
+}
+.purchaser1{
+    width:900px;
+    margin-left:40px;
+    margin-top: 20px;
+    display:flex;
+    overflow: hidden;
+}
+.purchaser1 ul li{
+    float: left;
+    box-sizing: border-box;
+}
+.purchaser_font0 input{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.purchaser_font1 input{
+    width: 100px;
+    height: 30px;
+    outline: none;
+}
+.purchaser_font1{
+    margin-left: 60px;
+}
+.purchaser_font2 input{
+    width: 160px;
+    height: 30px;
+    outline: none;
+}
+.purchaser_font2{
+    margin-left: 70px;
+}
+.purchaser_font3 input{
+    width: 130px;
+    height: 30px;
+    outline: none;
+}
+.purchaser_font3{
+    margin-left: 100px;
+}
+.purchaser_font4 a{
+    color: #00b3ee;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.purchaser_font4 a:hover{
+    color: #FE770A;
+}
+.purchaser_line3{
+    border: 1px solid #EDEDED;
+    margin-left: 90px;
+    margin-top: 10px;
+}
+.add_purchaser{
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.add_purchaser a .glyphicon{
+    font-size: 1.2em;
+    color: #FE770A;
+}
+
+.buttom-line{
+    border-bottom: 1px solid #e3e3e3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
