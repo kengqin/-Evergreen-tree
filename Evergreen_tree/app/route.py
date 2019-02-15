@@ -1,13 +1,12 @@
 from app.app import app
-from app.route_user import user
-from app.route_resume import resume
+from app.route_detail import detail
 
-# 构建蓝图
-app.register_blueprint(user,url_prefix='/api/user')
-app.register_blueprint(resume,url_prefix='/api/resume')
+app.register_blueprint(detail,url_prefix='/api/detail')
+
 @app.route('/api/v1')
 def index():
-    return 'INDEX'
+    return '123'
+
 @app.errorhandler(404)
 def miss(e):
     return '该页面不存在', 404
