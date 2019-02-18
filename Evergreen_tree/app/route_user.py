@@ -1,34 +1,39 @@
-from flask import Blueprint,request
+from flask import Blueprint, request
 # 导入user service模块
 
 from app.service.user_service import *
 import json
-#用参数name和import_name初始化
+
+# 用参数name和import_name初始化
 # user是模块的名称
-user = Blueprint('user',__name__)
+user = Blueprint('user', __name__)
+
+
 # restful api
 @user.route('/users')
 def users():
     return 'welcome user page!!'
 
-@user.route('/person',methods=['POST', 'GET','PUT','DELETE'])
 
+@user.route('/person', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def person():
-    if request.method=='GET':
+    if request.method == 'GET':
         return '获取用户信息'
-    elif request.method=='POST':
+    elif request.method == 'POST':
         if request.is_json and request.get_json():
-            u=request.get_json()
+            u = request.get_json()
             # result为添加用户的结果
-            result=addUser(u)
+            result = addUser(u)
             return result
         else:
-            return json.dumps({"status_code":"40005","status_text":"数据格式不合法"})
-    elif request.method=='PUT':
+            return json.dumps({"status_code": "40005", "status_text": "数据格式不合法"})
+    elif request.method == 'PUT':
         return '修改用户'
-    elif request.method=='DELETE':
+    elif request.method == 'DELETE':
         return '删除用户'
-@user.route('/login',methods=['POST'])
+
+
+@user.route('/login', methods=['POST'])
 def login():
     if request.is_json and request.get_json():
         u = request.get_json()
@@ -37,5 +42,3 @@ def login():
         return result
     else:
         return json.dumps({"status_code": "40005", "status_text": "数据格式不合法"})
-
-

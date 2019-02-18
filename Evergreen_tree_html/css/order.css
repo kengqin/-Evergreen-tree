@@ -114,18 +114,11 @@ a:active{
 
 .body2 {
     border: solid 2px rgba(100, 160, 200, 0.24);
-    height: 280px;
+    height: 200px;
     margin-top: 10px;
     width: 100%;
 }
 
-.body1 {
-    width: 100%;
-    height: 120px;
-    margin-top: 10px;
-    background: rgba(255, 166, 0, 0.2);
-    line-height: 120px;
-}
 
 .top {
     height: 26px;
@@ -351,39 +344,57 @@ body .container input {
 }
 
 .bottom-font {
-    width: 45%;
+    width:50%;
     height: 120px;
     margin: 0px 20px;
-    float: left;
+    /*float: left;*/
+    /*overflow: hidden;*/
+    text-align:left;
+    /*line-height:50px;*/
+    padding-top: 40px;
 }
 
 .bottom-count {
     width: 20%;
     height: 120px;
-    float: left;
+    /*float: left;*/
+    /*background:orange;*/
+    line-height: 120px;
 }
 
 .bottom-count .text {
     font-size: 1em;
     float: right;
+    text-align: center;
 }
 
 .bottom-count .text1 {
     color: red;
     font-size: 1.5em;
     float: right;
+    text-align: center;
 }
-
-.bottom-foot {
-    width: 30%;
+.body1 {
+    width: 100%;
     height: 120px;
-    float: right;
-
+    margin-top: 10px;
+    background: rgba(255, 166, 0, 0.2);
+    /*line-height: 120px;*/
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
 }
+
+/*.bottom-foot {*/
+    /*width: 30%;*/
+    /*height: 120px;*/
+    /*!*float: right;*!*/
+
+/*}*/
 
 .bottom-btn {
-    width: 150px;
-    float: right;
+    width: 200px;
+    /*float: right;*/
     background: orange !important;
     height: 40px;
     outline: none !important;
@@ -426,5 +437,6 @@ body .container input {
     color: dodgerblue;
 
 }
+.demo-input{padding-left: 10px; height: 38px; min-width: 262px; line-height: 38px; border: 1px solid #e6e6e6;  background-color: #fff;  border-radius: 2px;}
 
 /*--尾部结束--*/

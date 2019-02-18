@@ -1,3 +1,117 @@
+//传参
+
+
+        var url = window.location.href;
+        var result = url.split("?")[1];
+        var keyValue = result.split("&");
+        var obj = {};
+        for (var i = 0; i < keyValue.length; i++) {
+            var item = keyValue[i].split("=");
+            obj[item[0]] = item[1];
+        }
+        // alert(item[1]);
+
+window.onload = function () {
+
+
+};
+
+
+
+var con=document.getElementById("connection");
+con.innerHTML+=`<a href="pages/order.html?id=${item[1]}"  style="text-decoration: none"><b>前往支付</b></a>`
+
+
+
+//图片
+
+
+var image_ponit = {"tid":item[1]};
+postData('http://192.168.2.55:8080/api/detail/image_ponit',image_ponit,function (res) {
+    // res.toJSON();
+    // res['tname'];
+    var wq=document.querySelector('.container .row .xqpic');
+    wq.innerHTML+=`<img src="${res['image_ponit']}" style="width: 100%;height: 100%">`;
+});
+
+var image_ad1 = {"tid":item[1]};
+postData('http://192.168.2.55:8080/api/detail/image_ad1',image_ad1,function (res) {
+    var wq=document.querySelector('.ad-2 div');
+    wq.innerHTML+=`<img src="${res['image_ponit']}" style="width:100%">`;
+});
+
+var image_ad2 = {"tid":item[1]};
+postData('http://192.168.2.55:8080/api/detail/image_ad2',image_ad2,function (res) {
+    var wq=document.querySelector('.ad-3 div');
+    wq.innerHTML+=`<img src="${res['image_ad2']}" style="width:100%">`;
+});
+
+
+
+
+
+var a = {"tid":item[1]};
+postData('http://192.168.2.55:8080/api/detail/details',a,function (res) {
+    // res.toJSON();
+    // res['tname'];
+    var wq=document.querySelector('.wq-1');
+    wq.innerHTML=`${res['tname']}`;
+});
+
+
+
+var b = {"tid":item[1]};
+postData('http://192.168.2.55:8080/api/detail/detailss',b,function (res) {
+    var wq=document.querySelector('.wq-2');
+    wq.innerHTML=`${res['tintroduce']}`;
+});
+
+
+
+
+
+var c = {"tid":item[1]};
+postData('http://192.168.2.55:8080/api/detail/address', c,function (res) {
+    var ad=document.querySelector('.adress');
+    ad.innerHTML=`景点地址:${res['taddress']}`;
+});
+
+
+
+var d={"tid":item[1]};
+postData('http://192.168.2.55:8080/api/detail/open_time',d,function (res) {
+    var time = document.querySelector('.time');
+    time.innerHTML=`开放时间:${res['open_time']}`;
+});
+
+
+
+var e={"id":item[1]};
+postData('http://192.168.2.55:8080/api/detail/adult_price',e,function (res) {
+    var price = document.querySelector('.J-Price #PriceHolder');
+    price.innerHTML=`${res['adult_price']}`;
+});
+
+
+
+var f={"id":item[1]};
+postData('http://192.168.2.55:8080/api/detail/ticket',f,function (res) {
+    var ticket = document.querySelector('.t2');
+    ticket.innerHTML=`${res['adult_introduce']}`;
+});
+
+
+
+var mv={"id":item[1]};
+postData('http://192.168.2.55:8080/api/detail/market_value', mv,function (res) {
+    var market_value = document.querySelector('.t5');
+    market_value.innerHTML=`${res['Market_value']}`;
+});
+
+
+
+
+
 
 
 function overShow() {

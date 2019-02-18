@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>常青树旅游网</title>
     <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
 </head>
 <body>
@@ -101,19 +101,19 @@
                     <label id="destinationLabel" class="home-font home-image " for="destination">目的地</label>
                 </div>
                 <div class="search-forms">
-                   <form id="attractionSearch" class="hidden" action="/Search" onsubmit="return ta.call('ta.pages.home.validate', event, this);" style="display: block">
-                       <input type="hidden" name="ssrc" value="A">
-                       <div id="acctraction_search_bar_wrap" class="search_bar_wrap">
-                           <input name="q" class="attraction search-input error focusClear" type="text" placeholder="城市或景点名称" value="城市或景点名称" id="attractionSearch_loc_handler" autocomplete="off">
+                    <form id="attractionSearch" class="hidden" action="/Search" onsubmit="return ta.call('ta.pages.home.validate', event, this);" style="display: block">
+                        <input type="hidden" name="ssrc" value="A">
+                        <div id="acctraction_search_bar_wrap" class="search_bar_wrap">
+                            <input name="q" class="attraction search-input error focusClear" type="text" placeholder="城市或景点名称" value="城市或景点名称" id="attractionSearch_loc_handler" autocomplete="off">
 
-                           <span id="attractionSearch_loc_handler_icon" class="loc_handler_icon ui_icon caret-down"></span>
-                           <input type="hidden" name="geo" id="attractionSearch_loc_handler_geo-city" class="attraction search-input focusClear" value="">
+                            <span id="attractionSearch_loc_handler_icon" class="loc_handler_icon ui_icon caret-down"></span>
+                            <input type="hidden" name="geo" id="attractionSearch_loc_handler_geo-city" class="attraction search-input focusClear" value="">
 
-                       </div>
+                        </div>
 
-                       <input class="search home-image" type="submit" onmousedown="ta.store('ta.pages.home.find.clicked', true);" value="搜索">
+                        <input class="search home-image" type="submit" onmousedown="ta.store('ta.pages.home.find.clicked', true);" value="搜索">
 
-                   </form>
+                    </form>
                     <form id="destinationSearch" class="hidden" action="/Search" onsubmit="return ta.call('ta.pages.home.validate', event, this);" style="display: block;">
                         <div id="destination_search_bar_wrap" class="search_bar_wrap">
                             <input name="q" class="destination search-input error focusClear" type="text" placeholder="国家、地区、或城市" value="国家、地区、或城市" id="destinationSearch_loc_handler" autocomplete="off">
@@ -131,151 +131,142 @@
     </div>
 </div>
 
-<div class="container-fluid" style="background-color: #eeeeee">
+<div class="container" style="margin-top: 50px">
     <div class="row">
-        <div class="col-xs-12 col-md-12 col-lg-12">
-            <div class="hot-li">
-                <ul id="ul1">
-                    <li class="active-1"><a href="#">000</a> </li>
-                    <li class="active-2"><a href="#">001</a></li>
-                    <li class="active-3"><a href="#">002</a></li>
-                    <li class="active-4"><a href="#">003</a></li>
-                </ul>
-                <div class="content">
-                    <div class="col-xs-12 col-md-12 col-lg-12" id="show1">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp1.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp1.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp1.jpg">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-12 col-lg-12" id="show1">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp2.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp2.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp2.jpg">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-12 col-lg-12" id="show1">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp3.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp3.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp3.jpg">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-12 col-lg-12" id="show1">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp4.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp4.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="image/showp4.jpg">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: center">
+            <button onclick="sh();" value="展示更多" id="btn" type="button" style="background-color: #cee4f9;width: 200px;height: 40px;outline: none">
+                <b>推荐</b>
+            </button>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: center">
+            <button style="background-color: #6e93b0;width: 200px;height: 40px;outline: none">
+                <b>好评</b>
+            </button>
+        </div>
+        <div class="col-xs-4 col-md-4 col-lg-4" style="text-align: center">
+            <button style="background-color: #f0ad4e;width: 200px;height: 40px;outline: none">
+                <b>优惠</b>
+            </button>
+        </div>
+    </div>
 
+    <div class="row" id="hid">
+        <div class="col-xs-12 col-md-12 col-lg-12" style="display: flex;text-align: center">
+            <div style="flex: 1">123</div>
+            <div style="flex: 1">123</div>
+            <div style="flex: 1">123</div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid" style="margin-top: 100px ">
-    <div class="row" style="text-align: center">
-        <div class="col-xs-4 col-md-4 col-lg-4">排行榜1</div>
-        <div class="col-xs-4 col-md-4 col-lg-4">排行榜2</div>
-        <div class="col-xs-4 col-md-4 col-lg-4">排行榜3</div>
-    </div>
-</div>
-
-<div class="container" style="margin-top: 150px">
-    <div class="row">
-        <div class="jx">精选</div>
-        <div class="col-xs-4 col-md-4 col-lg-4">
-            <div class="pic1">
-                <div>
-                    <a href="#">
-                        <img src="image/dshow1.png">
-                    </a>
-
+<div class="container" style="margin-top: 50px">
+    <div class="jx">苏州精选<a href="#" style="text-decoration: none"> >> </a></div>
+    <div class="col-xs-3 col-md-4 col-lg-4">
+        <div class="pic1">
+            <div class="pic1-1">
+                <h2 class="promote_article__header" style="text-align: left; line-height: 150px">
+                    <a href="Order_details.html?id=1" style="text-decoration: none;color: #3d3d3d;background-color: #ffc900;font-size: 0.5em">苏州园林</a>
+                </h2>
+            </div>
+        </div>
+        <div style="margin-top: 8px;display: flex">
+            <div style="flex: 1">
+                <h5>
+                    苏州古典园林，简称苏州园林，是世界文化遗产、国家AAAAA级旅游景区，中国十大风景名胜之一。
+                </h5>
+            </div>
+            <div style="flex: 1;border-radius: 30px;">
+                <div style="text-align: right">
+                    <img src="image/hot%20火热%20热%20热销.svg">
+                    <b>火热销售中</b>
                 </div>
-            </div>
-            <div class="onwords">
-
-            </div>
-        </div>
-        <div class="col-xs-4 col-md-4 col-lg-4">
-            <div class="pic1">
-                <img src="https://cc.ddcdn.com/ddimg/home_2015/city_guide.png">
+                <div style="text-align: right">欲购从速 </div>
+                <div style="text-align: right"><a href="Order_details.html?id=1" style="text-decoration: none;color: #ffc900">立即查看</a> </div>
             </div>
         </div>
-        <div class="col-xs-4 col-md-4 col-lg-4">
-            <div class="pic1">
-                <img src="https://cc.ddcdn.com/ddimg/home_2015/tourism_blog.png">
+    </div>
+    <div class="col-xs-3 col-md-4 col-lg-4">
+        <div class="pic1">
+            <div class="pic1-2">
+                <h2 class="promote_article__header" style="text-align: left; line-height: 150px">
+                    <a href="Order_details.html?id=2" style="text-decoration: none;color: #3d3d3d;background-color: #ffc900;font-size: 0.5em">苏州周庄</a>
+                </h2>
+            </div>
+        </div>
+        <div style="margin-top: 8px;display: flex">
+            <div style="flex: 1">
+                <h5>
+                    周庄，是一座江南小镇，有“中国第一水乡”之誉   ，是国家首批5A级景区。
+                </h5>
+            </div>
+            <div style="flex: 1;border-radius: 30px;">
+                <div style="text-align: right">
+                    <img src="image/hot%20火热%20热%20热销.svg">
+                    <b>火热销售中</b>
+                </div>
+                <div style="text-align: right">欲购从速</div>
+                <div style="text-align: right"><a href="Order_details.html?id=2" style="text-decoration: none;color: #ffc900">立即查看</a> </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3 col-md-4 col-lg-4">
+        <div class="pic1">
+            <div class="pic1-3">
+                <h2 class="promote_article__header" style="text-align: left; line-height: 150px">
+                    <a href="Order_details.html?id=3" style="text-decoration: none;color: #3d3d3d;background-color: #ffc900;font-size: 0.5em">3</a>
+                </h2>
+            </div>
+        </div>
+        <div style="margin-top: 8px;display: flex">
+            <div style="flex: 1">
+                <h5>
+                    广告位招租.
+                </h5>
+            </div>
+            <div style="flex: 1;border-radius: 30px;">
+                <div style="text-align: right">
+                    <img src="image/hot%20火热%20热%20热销.svg">
+                    <b>火热销售中</b>
+                </div>
+                <div style="text-align: right">欲购从速</div>
+                <div style="text-align: right;"><a href="Order_details.html?id=3" style="text-decoration: none;color: #ffc900">立即查看</a> </div>
             </div>
         </div>
     </div>
 </div>
 
 <div class="container" style="margin-top: 80px">
-    <div class="jx">精选</div>
+    <div class="jx">旅行故事<a href="#" style="text-decoration: none"> >> </a> </div>
     <div class="row" id="jx">
         <div class="col-xs-3 col-md-4 col-lg-4">
-            <img src="image/jd.jpg">
+            <div class="story">
+                <div class="story-u">
+                    <h2 class="promote_article__header" style="text-align: center; line-height: 200px">
+                        <a href="#" style="text-decoration: none;color: #eeeeee">遇见你真好</a>
+                    </h2>
+                </div>
+            </div>
         </div>
         <div class="col-xs-6 col-md-4 col-lg-4">
-            <img src="image/pjd.jpg">
+            <div class="story-2">
+                <div class="story-m">
+                    <h2 class="promote_article__header" style="text-align: center; line-height: 200px">
+                        <a href="#" style="text-decoration: none;color: #eeeeee">游玩水相间</a>
+                    </h2>
+                </div>
+            </div>
         </div>
         <div class="col-xs-3 col-md-4 col-lg-4">
-            <img src="image/bl.jpg">
+            <div class="story-3">
+                <div class="story-d">
+                    <h2 class="promote_article__header" style="text-align: center; line-height: 200px">
+                        <a href="#" style="text-decoration: none;color: #eeeeee">繁华大世界</a>
+                    </h2>
+                </div>
+            </div>
         </div>
 
-</div>
+    </div>
 </div>
 
 <div class="container-fluid" style="margin-top: 50px">

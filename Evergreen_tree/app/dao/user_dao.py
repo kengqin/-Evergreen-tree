@@ -1,5 +1,5 @@
 # 用户模块
-from app.dao.__init__ import client
+from app.dao.__init__ import POOL
 import pymysql
 from app.dao.sql.sql_user import sql_user
 
@@ -13,6 +13,7 @@ def addUser(user):
 
     if not getUserById(user['telephone']):
         try:
+            client = pymysql.connect(host='192.168.1.109', user='root', password='123456', port=3306, db='pig')
             user_id = None
             cursor = client.cursor(cursor=pymysql.cursors.DictCursor)
             # 4. 准备sql语句
@@ -28,7 +29,6 @@ def addUser(user):
         except Exception as ex:
             client.rollback()
         finally:
-            print(user_id)
             return user_id
     else:
         return -1
@@ -36,6 +36,7 @@ def addUser(user):
 
 def getUserById(id):
     try:
+        client=POOL.connection()
         res_user = -1
         cursor = client.cursor(cursor=pymysql.cursors.DictCursor)
         # 4. 准备sql语句
@@ -50,10 +51,10 @@ def getUserById(id):
     except Exception as ex:
         client.rollback()
     finally:
-        print(res_user)
+        # print(res_user)
         return res_user
 
 
-if __name__ == '__main__':
-    user = {"telephone": "18792031923", "password": "123456"}
-    addUser(user)
+# if __name__ == '__main__':
+#     user = {"telephone": "18792031923", "password": "123456"}
+#     addUser(user)

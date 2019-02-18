@@ -1,4 +1,4 @@
-#!C:\Users\Administrator.SC-201812291300\PycharmProjects\untitled\venv\Scripts\python.exe
+#!D:\flask-project\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==28.8.0','console_scripts','easy_install-3.6'
 __requires__ = 'setuptools==28.8.0'
 import re

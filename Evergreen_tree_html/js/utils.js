@@ -1,14 +1,14 @@
 /**
- * Created by lzhan on 2019/1/8.
+ * Created by 相如 on 2019/1/24.
  */
 function getData(url,args=null,headers=null,cb) {
     var oAjax = null;
     oAjax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
     //拼接url
     if(args){
-       for(var key in args){
-           url=addURLParam(url,key,args[key]);
-       }
+        for(var key in args){
+            url=addURLParam(url,key,args[key]);
+        }
     }
 
 
@@ -51,9 +51,9 @@ function postData(url,args=null,cb) {
 
 
     //提交数据方式一
-  //设置请求头：提交数据的格式是 x-www-form-urlencoded
-  //   oAjax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-  //   oAjax.send(addData(args));
+    //设置请求头：提交数据的格式是 x-www-form-urlencoded
+    //   oAjax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    //   oAjax.send(addData(args));
     // oAjax.send('telephone=000&password=111');
 
     //提交方式二
@@ -90,7 +90,3 @@ function postData(url,args=null,cb) {
 
 
 }
-
-
-
-

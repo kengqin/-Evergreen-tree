@@ -60,9 +60,9 @@
     var line2 = document.getElementById("line2");
     var line3 = document.getElementById("line3");
     var line4 = document.getElementById("line4");
-    var select0=document.querySelector(".select0");
+    var select0 = document.querySelector(".select0");
     font1.onclick = function () {
-        select0.style.display="flex";
+        select0.style.display = "flex";
         font2.style.color = "black";
         font3.style.color = "black";
         font4.style.color = "black";
@@ -71,6 +71,85 @@
         line4.style.border = "1px solid #EDEDED";
         font1.style.color = "#4EB312";
         line1.style.border = "1px solid #4EB312";
+
+        postData('http://192.168.2.51:8080/api/myorder/myorder', sight_name, function (res) {
+            var price_all = 0;
+            var state = null;
+            var price = 0;
+            var num = 0;
+            var tao = document.querySelector(".tao");
+
+
+            tao.innerHTML=``;
+            for (var i = 0; i < res.length; i++) {
+                // price=Number();
+                // num=res[i]["adult_price"]*1;
+                price = parseInt(res[i]["adult_price"]);
+                // alert(typeof (price));
+                num = parseInt(res[i]["onum"]);
+                // alert(typeof (num));
+                // alert(num)
+                // price_all=res[i]["onum"]*res[i]["adult_price"];
+                price_all = price * num;
+                // alert(typeof (price_all));
+                // alert(price_all)
+                if (res[i]["order_start"] == 1) {
+                    state = '待支付'
+                } else if (res[i]["order_start"] == 2) {
+                    state = '待出行'
+                } else if (res[i]["order_start"] == 3) {
+                    state = "待评论"
+                } else {
+                    state = "已取消"
+                }
+
+                tao.innerHTML += `<div class="right_info2">
+                        <div class="picth">
+                            <img src="../image/order_jingdian.png" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p class="introduce_1"><span>${res[i]["tname"]}</span></p>
+                            <p class="introduce_2">
+                                游玩日期：
+                                <span>${res[i]["tourst_time"]}</span>
+                            </p>
+                            <p class="introduce_3">
+                                门票数量：
+                                <span>${res[i]["onum"]}</span>
+                                张
+                            </p>
+                        </div>
+                        <div class="price">
+                            <span class="glyphicon glyphicon-jpy">${price_all}</span>
+                        </div>
+                        <div class="number">
+                        <span>
+                            ${res[i]["order_id"]}
+                        </span>
+                        </div>
+                        <div class="state">
+                        <span>
+                            ${state}
+                        </span>
+                        </div>
+                        <div class="operation">
+                            <a href="order_detail.html" id="order_detail">
+                                <span>查看订单</span>
+                            </a>
+                            <a href="">
+                                <span>修改订单</span>
+                            </a>
+                            <a href="">
+                                <span>删除订单</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>`;
+                window.location.href = "order_detail.html?index="+res[i]["order_id"];
+                // var order_detail=document.querySelector("#order_detail");
+                // order_detail.href="order_detail.html?"+res[i]["order_id"];
+            }
+        });
     };
 
     font2.onclick = function () {
@@ -82,7 +161,89 @@
         line4.style.border = "1px solid #EDEDED";
         font2.style.color = "#4EB312";
         line2.style.border = "1px solid #4EB312";
-        select0.style.display="none";
+        select0.style.display = "none";
+
+
+        postData('http://192.168.2.51:8080/api/myorder/myorder', sight_name, function (res) {
+
+            var price_all = 0;
+            var state = null;
+            var price = 0;
+            var num = 0;
+            var tao = document.querySelector(".tao");
+            tao.innerHTML=``;
+            for (var i = 0; i < res.length; i++) {
+                // price=Number();
+                // num=res[i]["adult_price"]*1;
+                price = parseInt(res[i]["adult_price"]);
+                // alert(typeof (price));
+                num = parseInt(res[i]["onum"]);
+                // alert(typeof (num));
+                // alert(num)
+                // price_all=res[i]["onum"]*res[i]["adult_price"];
+                price_all = price * num;
+
+                // alert(typeof (price_all));
+                // alert(price_all)
+                if (res[i]["order_start"] == 1) {
+                    state = '待支付';
+
+                    tao.innerHTML += `<div class="right_info2">
+                    <div class="picth">
+                        <img src="../image/order_jingdian.png" alt="">
+                    </div>
+                    <div class="introduce">
+                        <p class="introduce_1"><span>${res[i]["tname"]}</span></p>
+                        <p class="introduce_2">
+                            游玩日期：
+                            <span>${res[i]["tourst_time"]}</span>
+                        </p>
+                        <p class="introduce_3">
+                            门票数量：
+                            <span>${res[i]["onum"]}</span>
+                            张
+                        </p>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-jpy">${price_all}</span>
+                    </div>
+                    <div class="number">
+                    <span>
+                        ${res[i]["order_id"]}
+                    </span>
+                    </div>
+                    <div class="state">
+                    <span>
+                        ${state}
+                    </span>
+                    </div>
+                    <div class="operation">
+                        <a href="order_detail.html">
+                            <span>查看订单</span>
+                        </a>
+                        <a href="">
+                            <span>修改订单</span>
+                        </a>
+                        <a href="">
+                            <span>删除订单</span>
+                        </a>
+                    </div>
+                </div>
+            </div>`;
+
+                } else if (res[i]["order_start"] == 2) {
+                    state = '待出行'
+
+                } else if (res[i]["order_start"] == 3) {
+                    state = "待评论"
+                } else {
+                    state = "已取消"
+                }
+
+            }
+        });
+
+
     };
     font3.onclick = function () {
         font1.style.color = "black";
@@ -93,7 +254,85 @@
         line4.style.border = "1px solid #EDEDED";
         font3.style.color = "#4EB312";
         line3.style.border = "1px solid #4EB312";
-        select0.style.display="none";
+        select0.style.display = "none";
+
+
+
+        postData('http://192.168.2.51:8080/api/myorder/myorder', sight_name, function (res) {
+            var price_all = 0;
+            var state = null;
+            var price = 0;
+            var num = 0;
+            var tao = document.querySelector(".tao");
+            tao.innerHTML=``;
+            for (var i = 0; i < res.length; i++) {
+                // price=Number();
+                // num=res[i]["adult_price"]*1;
+                price = parseInt(res[i]["adult_price"]);
+                // alert(typeof (price));
+                num = parseInt(res[i]["onum"]);
+                // alert(typeof (num));
+                // alert(num)
+                // price_all=res[i]["onum"]*res[i]["adult_price"];
+                price_all = price * num;
+                // alert(typeof (price_all));
+                // alert(price_all)
+                if (res[i]["order_start"] == 1) {
+                    state = '待支付';
+                } else if (res[i]["order_start"] == 2) {
+                    state = '待出行';
+                    tao.innerHTML += `<div class="right_info2">
+                    <div class="picth">
+                        <img src="../image/order_jingdian.png" alt="">
+                    </div>
+                    <div class="introduce">
+                        <p class="introduce_1"><span>${res[i]["tname"]}</span></p>
+                        <p class="introduce_2">
+                            游玩日期：
+                            <span>${res[i]["tourst_time"]}</span>
+                        </p>
+                        <p class="introduce_3">
+                            门票数量：
+                            <span>${res[i]["onum"]}</span>
+                            张
+                        </p>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-jpy">${price_all}</span>
+                    </div>
+                    <div class="number">
+                    <span>
+                        ${res[i]["order_id"]}
+                    </span>
+                    </div>
+                    <div class="state">
+                    <span>
+                        ${state}
+                    </span>
+                    </div>
+                    <div class="operation">
+                        <a href="order_detail.html">
+                            <span>查看订单</span>
+                        </a>
+                        <a href="">
+                            <span>修改订单</span>
+                        </a>
+                        <a href="">
+                            <span>删除订单</span>
+                        </a>
+                    </div>
+                </div>
+            </div>`;
+
+
+                } else if (res[i]["order_start"] == 3) {
+                    state = "待评论"
+                } else {
+                    state = "已取消"
+                }
+
+            }
+        });
     };
     font4.onclick = function () {
         font1.style.color = "black";
@@ -104,7 +343,85 @@
         line3.style.border = "1px solid #EDEDED";
         font4.style.color = "#4EB312";
         line4.style.border = "1px solid #4EB312";
-        select0.style.display="none";
+        select0.style.display = "none";
+
+
+        postData('http://192.168.2.51:8080/api/myorder/myorder', sight_name, function (res) {
+
+            var price_all = 0;
+            var state = null;
+            var price = 0;
+            var num = 0;
+            var tao = document.querySelector(".tao");
+            tao.innerHTML=``;
+            for (var i = 0; i < res.length; i++) {
+                // price=Number();
+                // num=res[i]["adult_price"]*1;
+                price = parseInt(res[i]["adult_price"]);
+                // alert(typeof (price));
+                num = parseInt(res[i]["onum"]);
+                // alert(typeof (num));
+                // alert(num)
+                // price_all=res[i]["onum"]*res[i]["adult_price"];
+                price_all = price * num;
+
+                // alert(typeof (price_all));
+                // alert(price_all)
+                if (res[i]["order_start"] == 1) {
+                    state = '待支付';
+                } else if (res[i]["order_start"] == 2) {
+                    state = '待出行';
+
+                } else if (res[i]["order_start"] == 3) {
+                    state = "待评论";
+                    tao.innerHTML += `<div class="right_info2">
+                    <div class="picth">
+                        <img src="../image/order_jingdian.png" alt="">
+                    </div>
+                    <div class="introduce">
+                        <p class="introduce_1"><span>${res[i]["tname"]}</span></p>
+                        <p class="introduce_2">
+                            游玩日期：
+                            <span>${res[i]["tourst_time"]}</span>
+                        </p>
+                        <p class="introduce_3">
+                            门票数量：
+                            <span>${res[i]["onum"]}</span>
+                            张
+                        </p>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-jpy">${price_all}</span>
+                    </div>
+                    <div class="number">
+                    <span>
+                        ${res[i]["order_id"]}
+                    </span>
+                    </div>
+                    <div class="state">
+                    <span>
+                        ${state}
+                    </span>
+                    </div>
+                    <div class="operation">
+                        <a href="order_detail.html">
+                            <span>查看订单</span>
+                        </a>
+                        <a href="">
+                            <span>修改订单</span>
+                        </a>
+                        <a href="">
+                            <span>删除订单</span>
+                        </a>
+                    </div>
+                </div>
+            </div>`;
+                } else {
+                    state = "已取消";
+                }
+
+            }
+        });
     };
     var select0_left = document.querySelector(".select0_left");
     var select0_right = document.querySelector(".select0_right");
@@ -182,6 +499,79 @@
     select2_2.onmouseout = function () {
         select2_2.style.background = "#FFFFFF";
     };
-    
 
+    var sight_name = {"telephone": 18792031925};
+    postData('http://192.168.2.51:8080/api/myorder/myorder', sight_name, function (res) {
+        var price_all = 0;
+        var state = null;
+        var price = 0;
+        var num = 0;
+        var tao = document.querySelector(".tao");
+        tao.innerHTMl=``;
+        for (var i = 0; i < res.length; i++) {
+            // price=Number();
+            // num=res[i]["adult_price"]*1;
+            price = parseInt(res[i]["adult_price"]);
+            // alert(typeof (price));
+            num = parseInt(res[i]["onum"]);
+            // alert(typeof (num));
+            // alert(num)
+            // price_all=res[i]["onum"]*res[i]["adult_price"];
+            price_all = price * num;
+
+            // alert(typeof (price_all));
+            // alert(price_all)
+            if (res[i]["order_start"] == 1) {
+                state = '待支付'
+            } else if (res[i]["order_start"] == 2) {
+                state = '待出行'
+            } else if (res[i]["order_start"] == 3) {
+                state = "待评论"
+            } else {
+                state = "已取消"
+            }
+            tao.innerHTML += `<div class="right_info2">
+                    <div class="picth">
+                        <img src="../image/order_jingdian.png" alt="">
+                    </div>
+                    <div class="introduce">
+                        <p class="introduce_1"><span>${res[i]["tname"]}</span></p>
+                        <p class="introduce_2">
+                            游玩日期：
+                            <span>${res[i]["tourst_time"]}</span>
+                        </p>
+                        <p class="introduce_3">
+                            门票数量：
+                            <span>${res[i]["onum"]}</span>
+                            张
+                        </p>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-jpy">${price_all}</span>
+                    </div>
+                    <div class="number">
+                    <span>
+                        ${res[i]["order_id"]}
+                    </span>
+                    </div>
+                    <div class="state">
+                    <span>
+                        ${state}
+                    </span>
+                    </div>
+                    <div class="operation">
+                        <a href="order_detail.html">
+                            <span>查看订单</span>
+                        </a>
+                        <a href="">
+                            <span>修改订单</span>
+                        </a>
+                        <a href="">
+                            <span>删除订单</span>
+                        </a>
+                    </div>
+                </div>
+            </div>`;
+        }
+    });
 })();

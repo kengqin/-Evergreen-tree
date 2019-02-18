@@ -343,27 +343,23 @@ width: 745px;
 #show1{
     margin-top: 100px;
 }
-.pic1:hover{
-
-    opacity: 0.5;
-position: relative;
-}
 .pic1{
-    text-align: center;
+
+    width: 100%;
+    height: 100%;
 }
 .onwords{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 11%;
+    left: 4%;
+    background-color: #ffc900;
 }
-.onwords:hover{
-    color: #00a680;
-}
+
 .jx{
     margin-bottom: 30px;
     font-size: 2em;
     font-weight: bolder;
-    text-align: center;
+    text-align: left;
 }
 .buttom-line{
     border-bottom: 1px solid #e3e3e3;
@@ -393,4 +389,76 @@ position: relative;
 .xs{
     font-size: 0.5em;
     text-align: right;
+}
+.story{
+    width: 100%;
+    height: 100%;
+    background-image: url("https://ac-q.static.booking.cn/xdata/images/xphoto/540x405/29987677.webp?k=485655557cdd3f407a70d9ca442f34a8aae652cae40290e0a08d7c483a072a71");
+    background-size: cover;
+}
+.story:hover{
+    transform:scale(1.1);
+    transition-duration:0.5s;
+}
+.story-u{
+    height: 200px;
+}
+.story-2{
+    width: 100%;
+    height: 100%;
+    background-image: url("https://a0.muscache.com/im/pictures/537913b3-f15b-40a0-a2e4-0f8be5816a5f.jpg?aki_policy=large");
+    background-size: cover;
+}
+.story-2:hover{
+    transform:scale(1.1);
+    transition-duration:0.5s;
+}
+.story-m{
+    height: 200px;
+}
+.story-3{
+    width: 100%;
+    height: 100%;
+    background-image: url("https://a0.muscache.com/im/pictures/9298aa44-33a3-4294-bf18-e72efee71580.jpg?aki_policy=large");
+    background-size: cover;
+}
+.story-3:hover{
+    transform:scale(1.1);
+    transition-duration:0.5s;
+}
+.story-d{
+    height: 200px;
+}
+.pic1-1{
+    background-image: url("https://img.alicdn.com/bao/uploaded///gw.alicdn.com/imgextra/TB1fGhmevjM8KJjSZFySutdzVXa.jpg_230x230.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+}
+.pic1-1:hover{
+    transform:scale(1.1);
+    transition-duration:1s;
+}
+.pic1-2{
+    background-image: url("https://img.alicdn.com/bao/uploaded///img.alicdn.com/i1/3934000375/TB2.w9JjLiSBuNkSnhJXXbDcpXa_!!3934000375.jpg_230x230.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+}
+.pic1-2:hover{
+    transform:scale(1.1);
+    transition-duration:1s;
+}
+.pic1-3{
+    background-image: url("https://goss2.veer.com/creative/vcg/veer/612/veer-305609193.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+}
+.pic1-3:hover{
+    transform:scale(1.1);
+    transition-duration:1s;
+}
+#hid{
+    display: none;
 }

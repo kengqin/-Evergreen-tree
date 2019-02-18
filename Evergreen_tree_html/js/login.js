@@ -10,9 +10,9 @@ document.querySelector('#btn_regist').onclick=function () {
    if(checkPassword() && checkTelphone()){
    //    开始提交后台
        var user={"telephone":tel.value,"password":password.value};
-       postData('http://192.168.1.106:8080/api/user/login',user,function (res) {
+       postData('http://192.168.1.109:8080/api/user/login',user,function (res) {
            if(res && res.status_code=='10003'){
-               alert(res.status_text)
+               // alert(res.status_text)
                localStorage.setItem('token',res.token);
                localStorage.setItem('telephone',res.telephone);
 

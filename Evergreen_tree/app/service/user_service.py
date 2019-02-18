@@ -16,7 +16,6 @@ def addUser(user):
                 return json.dumps({"status_code": "10002", "status_text": "用户已经存在"})
             else:
                 token = createToken(user['telephone'])
-
                 response = make_response()
                 response.data = json.dumps({"status_code": "10001",
                                             "status_text": "注册成功", "token": token, "telephone": user['telephone']})

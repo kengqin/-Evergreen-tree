@@ -2,169 +2,251 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>订单确认</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/order.css">
 </head>
 <body>
-    <!--头部开始-->
-    <div class="container">
-        <div class="row" style="height: 50px">
-            <div class=" col-xs-4 hidden-xs col-md-8 col-lg-9">
-                <div class="col-xs-8 col-md-6  col-lg-4">
-                    <div class="img">
-                        <img src="../image/logo1.png" style="height: 70px;width:150px">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-12  visible-md col-lg-8 visible-lg" id="links-container">
-
-                    <ul class="global-nav-links-menu">
-                        <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">目的地</a></li>
-                        <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">
-                            <span class="ui_icon hotels"></span>酒店</a></li>
-                        <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">
-                            <span class="ui_icon attractions"></span>景点</a></li>
-                        <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">
-                            <span class="ui_icon restaurants"></span>美食</a></li>
-                        <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">游记</a></li>
-                    </ul>
-
+<!--头部开始-->
+<div class="container">
+    <div class="row" style="height: 50px">
+        <div class=" col-xs-4 hidden-xs col-md-8 col-lg-9">
+            <div class="col-xs-8 col-md-6  col-lg-4">
+                <div class="img">
+                    <img src="../image/logo1.png" style="height: 70px;width:150px">
                 </div>
             </div>
-            <div class="col-xs-8 col-md-4 col-lg-3">
-                <div class="write">
-                    <div class="icon"><a href="#" title="写游记"><img src="../image/书写.svg"></a></div>
-                    <div class="icon"><a href="#" title="开始旅行"><img src="../image/旅行.svg"></a></div>
-                    <div class="icon2"><a href="login.html">登录</a>
-                        <a href="regist.html">注册</a>
-                    </div>
+            <div class="col-xs-12 col-md-12  visible-md col-lg-8 visible-lg" id="links-container">
 
+                <ul class="global-nav-links-menu">
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">目的地</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">
+                        <span class="ui_icon hotels"></span>酒店</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">
+                        <span class="ui_icon attractions"></span>景点</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">
+                        <span class="ui_icon restaurants"></span>美食</a></li>
+                    <li class="nav-sub-item"><a href="#" class="unscoped global-nav-link ui_tab ">游记</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-xs-8 col-md-4 col-lg-3">
+            <div class="write">
+                <div class="icon"><a href="#" title="写游记"><img src="../image/书写.svg"></a></div>
+                <div class="icon"><a href="#" title="开始旅行"><img src="../image/旅行.svg"></a></div>
+                <div class="icon2"><a href="login.html">登录</a>
+                    <a href="regist.html">注册</a>
                 </div>
+
             </div>
         </div>
     </div>
-    <!--头部结束-->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <!--主体部分开始-->
+</div>
+<!--头部结束-->
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <!--主体部分开始-->
 
-                <div class="title">
-                    <div class="title1">
-                        <a href="#"><h5>1、搜索选择景区</h5></a>
-                    </div>
-                    <div class="title2">
-                       <h5>2、填写订单信息</h5>
-                    </div>
-                    <div class="title3">
-                        <h5>3、预定成功</h5>
-                    </div>
+            <div class="title">
+                <div class="title1">
+                    <a href="#"><h5>1、搜索选择景区</h5></a>
                 </div>
-
-                <div class="body">
-                    <div class="container">
-                        <div class="top">
-                            <div class="top-font">预定信息</div>
-                        </div>
-                        <div class="line"></div>
-                        <div class="txt">
-                            <a href="#">虎丘成人票(当天可预订，无需换票 直接刷身份证入园)随时退预订说明</a>
-                        </div>
-                        <div class="date">
-                            选择游玩日期：<input class="laydate-icon"
-                                          onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                          placeholder="  游玩日期">
-                        </div>
-                        <div class="select">
-                            <table>
-                                <tr class="cart-good">
-                                    <td>
-                                        门票数量:
-                                    </td>
-                                    <td class="cart-td">
-                                        <input type="button" value="-" id="btn"  disabled >
-                                        <input type="text" value="1" id="text">
-                                        <input type="button" value="+" id="btn1">
-                                    </td>
-                                    <td>
-                                        <div id="div-show">1张起订，10张上限</div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="line" style="margin-top: 50px">
-
-                        </div>
-                        <div class="count">
-                            <div class="txt1">
-                                <span style="font-size: 1.5em;">门票费</span><span
-                                    class="text3">￥60</span>
-                            </div>
-                            <div class="txt2">
-                                <h6>虎丘成人票(当天可预订，无需换票 直接刷身份证入园)×1</h6>
-                            </div>
-                        </div>
-                    </div>
+                <div class="title2">
+                    <h5>2、填写订单信息</h5>
                 </div>
-                <div class="body2">
-                    <div class="container">
-                        <div class="top">
-                            <div class="top-font">取票人信息</div>
+                <div class="title3">
+                    <h5>3、预定成功</h5>
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="container">
+                    <div class="top">
+                        <div class="top-font">预定信息</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="txt">
+                        <a href="#" id="ticket"></a>
+                        <span>预定须知</span>
+                    </div>
+
+                    <div class="date">
+                        选择游玩日期：<input type="text" class="demo-input" placeholder="请选择日期" id="date" readonly>
+                        <span id="date-error" style="font-size: 1em;color:orange;"></span>
+
+                        <!--<input class="laydate-icon"-->
+                        <!--onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"-->
+                        <!--placeholder="  游玩日期" id="date_select">-->
+                    </div>
+                    <div class="select">
+                        <table>
+                            <tr class="cart-good">
+                                <td>
+                                    门票数量:
+                                </td>
+                                <td class="cart-td">
+                                    <input type="button" value="-" id="btn" disabled>
+                                    <input type="text" value="1" id="text">
+                                    <input type="button" value="+" id="btn1">
+                                </td>
+                                <td>
+                                    <div id="div-show">1张起订，上限9张</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="line" style="margin-top: 50px">
+
+                    </div>
+                    <div class="count">
+                        <div class="txt1">
+                            <span style="font-size: 1.5em;">门票费</span><span
+                                class="text3"></span>
                         </div>
-                        <div class="line"></div>
-                        <div class="date">
-                            姓 名：<input type="text" placeholder="  请输入姓名"><span class="text4" onmouseover="txtShow()" onmouseout="txtHide()">怎么填写<div class="icon3"></div></span><div class="p" id="p-show"></div>
-                        </div>
-                        <div class="date">
-                            手机号码：<input type="text" placeholder="  免费接收订单确认短信"><span class="text4" onmouseover="txt1Show()" onmouseout="txt1Hide()">帮人预定<div class="icon3"></div></span><div class="p1" id="p1-show"></div>
-                        </div>
-                        <div class="date">
-                            证件号码：<input type="text" placeholder="  取票时需出示证件确认">
-                        </div>
-                        <div class="select">
+                        <div class="txt2">
+                            <span id="txt"></span><span id="txt2"></span>
                         </div>
                     </div>
                 </div>
-                <div class="body1">
-                    <div class="bottom-font">
-                        票型名称: 虎丘成人票(当天可预订，无需换票 直接刷身份证入...
+            </div>
+            <div class="body2">
+                <div class="container">
+                    <div class="top">
+                        <div class="top-font">取票人信息</div>
                     </div>
-                    <div class="bottom-count">
+                    <div class="line"></div>
+                    <div class="date">
+                        姓 名：<input type="text" placeholder="  请输入姓名" id="name"><span class="text4"
+                                                                                     onmouseover="txtShow()"
+                                                                                     onmouseout="txtHide()">怎么填写<div
+                            class="icon3"></div></span>
+                        <div class="p" id="p-show"></div>
+                        <span id="name-error" style="font-size: 1em;color:orange;"></span>
+                    </div>
+                    <div class="date">
+                        手机号码：<input type="text" placeholder="  免费接收订单确认短信" id="telephone"><span class="text4"
+                                                                                                onmouseover="txt1Show()"
+                                                                                                onmouseout="txt1Hide()">帮人预定<div
+                            class="icon3"></div></span>
+                        <div class="p1" id="p1-show"></div>
+                        <span id="tel-error" style="font-size: 1em;color:orange;"></span>
+                    </div>
 
-                        <span class="text1">￥60</span>
-                        <span class="text">应付金额:</span>
+                    <div class="select">
                     </div>
-                    <div class="bottom-foot">
-                        <!--<a href="#" class="bottom-btn" role="button">去支付</a>-->
-                        <div style="margin: 40px 30px"><a href="#" class="btn btn-primary btn-lg active bottom-btn"
-                                                          role="button">去支付</a>
-                        </div>
+                </div>
+            </div>
+            <div class="body1">
+                <div class="bottom-font">
+
+                        <span id="txt6">
+                            <!--票型名称: **成人票-->
+                        </span><span id="txt3"></span>
+                    <div id="time" style="display: none">
+
                     </div>
 
                 </div>
 
-                <div class="foot">
-                    <span>《虎丘》</span>
-                </div>
-                <!--主体部分结束-->
+                <div class="bottom-count">
 
-                <!--尾部开始-->
-                <div class="footer">
-                    <div class="foot-line"></div>
-                    <span>Copyright © 2018-2019 版权所有 常青树网络科技股份有限公司&nbsp;&nbsp;<span
-                            class="text2">苏ICP证B2-20181109</span></span>
-
+                    <span class="text1"></span>
+                    <span class="text">应付金额:</span>
                 </div>
-                <!--尾部结束-->
+                <div class="bottom-foot">
+                    <!--<a href="#" class="bottom-btn" role="button">去支付</a>-->
+                    <div style="margin: 40px 30px"><a href="#" class="btn btn-primary btn-lg active bottom-btn"
+                                                      role="button" id="btn-buy">去支付</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="foot">
+
+            </div>
+            <!--主体部分结束-->
+
+            <!--尾部开始-->
+            <!--<div class="footer">-->
+            <!--<div class="foot-line"></div>-->
+            <!--<span>Copyright © 2018-2019 版权所有 常青树网络科技股份有限公司&nbsp;&nbsp;<span-->
+            <!--class="text2">苏ICP证B2-20181109</span></span>-->
+
+            <!--</div>-->
+            <!--尾部结束-->
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="footer">
+                <div class="foot-line"></div>
+                <span>Copyright © 2018-2019 版权所有 常青树网络科技股份有限公司&nbsp;&nbsp;<span
+                        class="text2">苏ICP证B2-20181109</span></span>
             </div>
         </div>
     </div>
+</div>
+<!--<script src="../node_modules/laydate-v1.1/laydate.js"></script>-->
+<script src="../node_modules/laydate/laydate.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/order.js"></script>
+<script>
+    /*--信息展示开始--*/
+    // function overShow() {
+    //     var showDiv = document.getElementById('showDiv');
+    //     showDiv.style.left = event.clientX;
+    //     showDiv.style.top = event.clientY;
+    //     showDiv.style.display = 'block';
+    //     showDiv.innerHTML = '1张起订99张上限';
+    //
+    // }
+    //
+    // function outHide() {
+    //     var showDiv = document.getElementById('showDiv');
+    //     showDiv.style.display = 'none';
+    //     showDiv.innerHTML = '';
+    // }
+    function txtShow() {
+        var p = document.querySelector('#p-show');
+        p.style.display = 'block';
+        p.innerHTML = `<p>1. 取票人姓名必须与所持证件一致。<p>
+                        <p>2. 若姓名中包含生僻字，生僻字需更换为拼音。<p>
+                        <p>3. 姓名中不可含有称谓等词语，如：小姐、先生、太太、夫人等。<p>
+<p>4. 中文姓名不可少于2个汉字，英文姓名不可少于2个英文单词。<p>`
+    }
 
-<script src="../node_modules/laydate-v1.1/laydate.js"></script>
-    <script src="../js/utils.js"></script>
+    function txtHide() {
+        var p = document.querySelector('#p-show');
+        p.style.display = 'none';
+        p.innerHTML = '';
+    }
 
-    <script src="../js/order.js"></script>
+    function txt1Show() {
+        var p1 = document.querySelector('#p1-show');
+        // showDiv.style.left = event.clientX;
+        // showDiv.style.top = event.clientY;
+        p1.style.display = 'block';
+        p1.innerHTML = `<p>如您是帮朋友预订，请填写您朋友的姓名、手机号码。<p>`
+    }
 
+    function txt1Hide() {
+        var p1 = document.querySelector('#p1-show');
+        p1.style.display = 'none';
+        p1.innerHTML = '';
+    }
 
+    /*--信息展示结束--*/
+</script>
 </body>
 </html>

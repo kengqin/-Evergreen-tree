@@ -535,7 +535,9 @@ label.bui-radios-label.bui-radios-anim .bui-radios {
     cursor: pointer;
 }
 
-
+.buttom-line{
+    border-bottom: 1px solid #e3e3e3;
+}
 
 
 

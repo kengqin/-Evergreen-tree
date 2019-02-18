@@ -1,5 +1,26 @@
 /* Created by  on */
+// var url = window.location.href;
+// var result = url.split("?")[1];
+// var keyValue = result.split("&");
+// var obj = {};
+// for (var i = 0; i < keyValue.length; i++) {
+//     var item = keyValue[i].split("=");
+//     obj[item[0]] = item[1];
+// }
+// alert(item[1]);
+//
+// window.onload = function () {
+//
+//
+// };
 (function () {
+    //传参
+
+    var ind = getUrlQueryString('index');
+    alert(ind);
+
+
+
     var item_info1 = document.getElementById("pull1");
     var item_comm_inf1 = document.getElementById("pull2");
     var item_info = document.getElementById("down1");
@@ -9,6 +30,7 @@
     var order_left = document.querySelector(".order_left");
     var flag1 = false;
     var flag2 = true;
+    // alert(obj[item[0]]);
     none1.style.display = "block";
     none2.style.display = "none";
     item_info1.onclick = function () {

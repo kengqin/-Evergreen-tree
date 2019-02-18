@@ -119,13 +119,20 @@ body,div{
 #dis-p img{
     width: 100%;
 }
-#dis-p{
-    text-align: center;
+#dis-p .wq-1{
+    color: #4c5a65;
+    font-size: 2em;
+    font-weight: bolder;
+}
+#dis-p span{
+    color: #4c5a65;
+
+    font-size: 0.5em;
 }
 
 #bg-p{
     background: #fcf9ea;
-    text-align: center;
+
     padding-right: 0!important;
 
 }
