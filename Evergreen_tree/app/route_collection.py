@@ -1,12 +1,12 @@
 from flask import Blueprint, request
 from app.service.mycollection_service import *
 import json
-mycollection = Blueprint('mycollection', __name__)
+
+my_collection = Blueprint('my_collections', __name__)
 
 
-
-@mycollection.route('/mycollection', methods=['GET', 'POST'])
-def collection():
+@my_collection.route('/my_collections', methods=['GET', 'POST'])
+def my_collections():
     if request.method == 'GET':
         return 'loding'
     elif request.method == 'POST':

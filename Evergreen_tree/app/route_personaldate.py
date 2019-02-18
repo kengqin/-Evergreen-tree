@@ -1,8 +1,8 @@
 from flask import Blueprint, request
 from app.service.personalDate_service import *
 import json
-personalDate = Blueprint('personalDate', __name__)
 
+personalDate = Blueprint('personalDate', __name__)
 
 
 @personalDate.route('/personalDate', methods=['GET', 'POST'])

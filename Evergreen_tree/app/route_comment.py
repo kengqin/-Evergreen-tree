@@ -1,8 +1,8 @@
 from flask import Blueprint, request
 from app.service.comment_service import *
 import json
-comment = Blueprint('comment', __name__)
 
+comment = Blueprint('comment', __name__)
 
 
 @comment.route('/comment', methods=['GET', 'POST'])

@@ -1,13 +1,16 @@
 from flask import Blueprint, request, make_response
 # 导入user service模块
 from app.service.order_service import get_ticket_info
-from app.utils.my_token import checkLogin,checkToken
+from app.utils.my_token import checkLogin, checkToken
+
 # 用参数name和import_name初始化
 # user是模块的名称
 orders = Blueprint('orders', __name__)
 import json
+
+
 # restful api
-@orders.route('/goods',methods=['POST', 'GET','PUT','DELETE'])
+@orders.route('/goods', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def order():
     # id=request.values.get('telephone')
     if request.method == 'POST':
@@ -20,7 +23,9 @@ def order():
             return result
         else:
             return json.dumps({"status_code": "40005", "status_text": "数据格式不合法"})
-@orders.route('/buy',methods=['POST', 'GET','PUT','DELETE'])
+
+
+@orders.route('/buy', methods=['POST', 'GET', 'PUT', 'DELETE'])
 # @checkLogin(request)
 def buy():
     # id=request.values.get('telephone')
@@ -34,10 +39,12 @@ def buy():
             return result
         else:
             return json.dumps({"status_code": "40005", "status_text": "数据格式不合法"})
-@orders.route('/cashier',methods=['POST', 'GET','PUT','DELETE'])
+
+
+@orders.route('/cashier', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def cashier():
     # id=request.values.get('telephone')
-    token1=None
+    token1 = None
     if request.method == 'POST':
         if request.is_json and request.get_json():
             token1 = request.get_json()
@@ -56,6 +63,7 @@ def cashier():
                 return json.dumps({"status_code": "10007", "status_text": "未登录"})
         else:
             return json.dumps({"status_code": "40005", "status_text": "数据格式不合法"})
+
 
 '''
 @resume.route('/list/')

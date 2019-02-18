@@ -2,11 +2,11 @@ from flask import Blueprint, request
 from app.service.mydetails_service import *
 import json
 
-mydetails = Blueprint('mydetails', __name__)
+my_details = Blueprint('my_details', __name__)
 
 
-@mydetails.route('/mydetails',methods=['pos','get'])
-def my_details():
+@my_details.route('/my_details', methods=['POST', 'GET'])
+def my_detail():
     if request.method == 'GET':
         return 'loding'
     elif request.method == 'POST':

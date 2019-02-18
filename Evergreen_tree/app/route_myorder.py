@@ -1,8 +1,8 @@
 from flask import Blueprint, request
 from app.service.myOrder_service import *
 import json
-myorder = Blueprint('myorder', __name__)
 
+myorder = Blueprint('myorder', __name__)
 
 
 @myorder.route('/myorder', methods=['GET', 'POST'])

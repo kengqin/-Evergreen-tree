@@ -3,9 +3,9 @@ from app.route_user import user
 from app.route_order import orders
 from app.route_detail import detail
 from app.route_myorder import myorder
-from app.route_mydetails import mydetails
+from app.route_mydetails import my_details
 from app.route_personaldate import personalDate
-from app.route_collection import collection
+from app.route_collection import my_collection
 from app.route_comment import comment
 from app.route_purchaser import purchaser
 from app.route_safety import safety
@@ -14,9 +14,9 @@ app.register_blueprint(user, url_prefix='/api/user')
 app.register_blueprint(orders, url_prefix='/api/orders')
 app.register_blueprint(detail, url_prefix='/api/detail')
 app.register_blueprint(myorder, url_prefix='/api/myorder')
-app.register_blueprint(mydetails, url_prefix='/api/mydetails')
+app.register_blueprint(my_details, url_prefix='/api/my_details')
 app.register_blueprint(personalDate, url_prefix='/api/personalDate')
-app.register_blueprint(collection, url_prefix='/api/collection')
+app.register_blueprint(my_collection, url_prefix='/api/my_collections')
 app.register_blueprint(comment, url_prefix='/api/comment')
 app.register_blueprint(purchaser, url_prefix='/api/purchaser')
 app.register_blueprint(safety, url_prefix='/api/safety')
